@@ -17,10 +17,10 @@ export default function Home() {
         <span>
           Hosenur - Full Stack Web Dev / Full Stack App Dev / Linux Enthusiast
         </span>
-        <p className="text-6xl">
+        <p className="text-4xl  md:text-6xl">
           I build websites and apps, with the latest technologies
         </p>
-        <div className="stats shadow w-full">
+        <div className="stats shadow stats-vertical md:stats-horizontal w-full">
           <div className="stat">
             <div className="stat-figure text-primary">
               <svg
