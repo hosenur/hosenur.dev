@@ -9,7 +9,7 @@ const space = Space_Mono({
 });
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider enableSystem={false} disableTransitionOnChange>
+    <ThemeProvider defaultTheme="lofi" enableSystem={false} disableTransitionOnChange>
       <main className={space.className}>
         <Component {...pageProps} />
       </main>
