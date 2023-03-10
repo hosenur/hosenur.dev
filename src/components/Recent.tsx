@@ -7,8 +7,8 @@ export default function Recent({ data }: { data: any }) {
   console.log(data);
   return (
     <div className="flex space-y-5 flex-col">
-      <span className="text-4xl">
-        CheckOut&nbsp;
+      <span className="text-3xl md:text-4xl">
+        Check Out&nbsp;
         <Link href={data.url} className="gradient">
           {data.title}
         </Link>
