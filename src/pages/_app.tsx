@@ -10,7 +10,7 @@ const space = Space_Mono({
 });
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider defaultTheme="lofi" enableSystem={false} disableTransitionOnChange>
+    <ThemeProvider defaultTheme="lofi" enableSystem={false}>
       <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       <main className={space.className}>
         <Component {...pageProps} />

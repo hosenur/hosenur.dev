@@ -22,7 +22,8 @@
     background-position: 400%;
   }
 }
-
-*{
-  transition: all 0.05s ease-in-out  ;
+body{
+  transition: all 0.5s ease-in-out;
 }
+
+

@@ -1,27 +1,36 @@
 import { sanityClient } from "@/utils/sanity.client";
 import { PortableText } from "@portabletext/react";
-import Image from "next/image";
+import Head from "next/head";
 import urlFor from "@/utils/urlFor";
 import Header from "@/components/Header";
 
 export default function Product({ data }: { data: any }) {
   return (
-    <div>
-      <Header />
+    <>
+      <Head>
+        <title>{data.title}</title>
+        <meta name="description" content={data.description} />
+        <meta property="og:title" content={data.title} />
+        <meta property="og:description" content={data.description} />
+        <meta property="og:image" content={urlFor(data.mainImage).url()} />
+      </Head>
+      <div>
+        <Header />
 
-      <main className="max-w-5xl p-5 mx-auto flex flex-col space-y-5">
-        <h1 className="text-6xl font-bold">{data.title}</h1>
-        <img
-          src={urlFor(data.mainImage).url()}
-          className="w-full rounded-sm"
-          alt=""
-        />
-        <PortableText value={data.body}/>
-        <div className="relative w-full h-full">
-          {/* <Image src={urlFor(data.mainImage).url()} alt="cover" width={1000} height={200} /> */}
-        </div>
-      </main>
-    </div>
+        <main className="max-w-5xl p-5 mx-auto flex flex-col space-y-5">
+          <h1 className="text-6xl font-bold">{data.title}</h1>
+          <img
+            src={urlFor(data.mainImage).url()}
+            className="w-full rounded-sm"
+            alt=""
+          />
+          <PortableText value={data.body} />
+          <div className="relative w-full h-full">
+            {/* <Image src={urlFor(data.mainImage).url()} alt="cover" width={1000} height={200} /> */}
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
 // fetch the data from sanity using the slug
