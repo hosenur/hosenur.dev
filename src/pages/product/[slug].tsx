@@ -20,7 +20,12 @@ export default function Product({ data }: { data: any }) {
 
         <main className="max-w-5xl p-5 mx-auto flex flex-col space-y-5">
           <h1 className="text-6xl font-bold">{data.title}</h1>
-          <Image  src={urlFor(data.mainImage).url()} width={1616} height={848} alt="banner" />
+          <Image
+            src={urlFor(data.mainImage).url()}
+            width={1616}
+            height={848}
+            alt="banner"
+          />
           <PortableText value={data.body} />
           <div className="relative w-full h-full"></div>
         </main>
@@ -40,7 +45,7 @@ export const getStaticPaths = async () => {
   }));
   return {
     paths,
-    fallback: true,
+    fallback: "blocking",
   };
 };
 export const getStaticProps = async ({ params }: any) => {
@@ -52,6 +57,5 @@ export const getStaticProps = async ({ params }: any) => {
     props: {
       data,
     },
-    revalidate: 10 * 60 * 60,
   };
 };
