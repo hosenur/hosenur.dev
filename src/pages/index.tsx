@@ -24,6 +24,7 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="divider">Ignite 🔥</div>
       <main className="max-w-5xl p-5 mx-auto font-bold space-y-10">
         <span>
           Hosenur - Full Stack Web Dev / Full Stack App Dev / Linux Enthusiast
@@ -32,8 +33,11 @@ export default function Home({
           I build <span className="gradient">super cool stuff</span> with the
           best and latest technologies
         </p>
+        <div className="divider">Stats</div>
         <Stats />
+        <div className="divider">Latest Product</div>
         <Recent data={latestProduct} />
+        <div className="divider">Products</div>
         <Projects />
       </main>
       <Footer />
@@ -41,7 +45,7 @@ export default function Home({
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const data = await sanityClient.fetch(`*[_type == "product"]`);
   const latestProduct = await sanityClient.fetch(
     `*[_type == "product"] | order(_createdAt desc) [0]`
@@ -51,6 +55,5 @@ export const getStaticProps = async () => {
       data,
       latestProduct,
     },
-    revalidate: 10 * 60 * 60,
   };
 };
