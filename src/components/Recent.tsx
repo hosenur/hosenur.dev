@@ -1,4 +1,5 @@
 import urlFor from "@/utils/urlFor";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -13,7 +14,12 @@ export default function Recent({ data }: { data: any }) {
         </Link>
         ✨
       </span>
-      <img src={urlFor(data.mainImage).url()} alt="" />
+      <Image
+        src={urlFor(data.mainImage).url()}
+        width={1616}
+        height={848}
+        alt="banner"
+      />
       <p>{data.description}</p>
       <Link className="text-info" href={`/product/${data.slug.current}`}>
         Read More ↗️
