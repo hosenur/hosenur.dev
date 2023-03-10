@@ -25,5 +25,8 @@
 body{
   transition: all 0.5s ease-in-out;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 
