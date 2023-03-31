@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 export default function Recent({ data }: { data: any }) {
-  console.log(data);
   return (
     <div className="flex space-y-5 flex-col">
       <span className="text-3xl md:text-4xl">
