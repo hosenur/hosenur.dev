@@ -60,10 +60,10 @@ export default function Guestbook() {
               post
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-5 md:space-x-5 md:space-y-0">
-              <button onClick={authGitHub} className="btn btn-wide">
+              <button onClick={authGitHub} className="btn btn-wide uppercase">
                 Auth with GitHub
               </button>
-              <button onClick={authGoogle} className="btn btn-wide">
+              <button onClick={authGoogle} className="btn btn-wide uppercase">
                 Auth With Google
               </button>
             </div>
