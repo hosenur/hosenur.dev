@@ -59,7 +59,7 @@ export default function Guestbook() {
               suggestion, review or even humor.Continue with GitHub or Google to
               post
             </p>
-            <div className="flex justify-center space-x-5">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-5 md:space-x-5 md:space-y-0">
               <button onClick={authGitHub} className="btn btn-wide">
                 Auth with GitHub
               </button>
