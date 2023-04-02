@@ -55,16 +55,17 @@ export default function Guestbook() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="max-w-5xl p-5 mx-auto font-bold space-y-5">
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           <Image
             src={
               "https://ik.imagekit.io/kydj5j026nb/heart-pixel_hs3ac3RvK.svg"
             }
             width={200}
             height={200}
+            className="w-20 h-20 md:w-[200px] md:h-[200px]"
             alt="bolt"
           />
-          <h1 className="text-9xl font-bold">GuestBook</h1>
+          <h1 className="text-4xl md:text-9xl font-bold">GuestBook</h1>
         </div>
         {!currentUser ? (
           <div className="flex space-y-5 flex-col">
