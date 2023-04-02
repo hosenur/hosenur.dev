@@ -4,6 +4,7 @@ import Head from "next/head";
 import urlFor from "@/utils/urlFor";
 import Header from "@/components/Header";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 export default function Product({ data }: { data: any }) {
   return (
@@ -29,6 +30,7 @@ export default function Product({ data }: { data: any }) {
           <PortableText value={data.body} />
           <div className="relative w-full h-full"></div>
         </main>
+        <Footer/>
       </div>
     </>
   );
