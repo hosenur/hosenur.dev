@@ -39,6 +39,7 @@ export default function Home({
         <Recent data={latestProduct} />
         <div className="divider">Products</div>
         <Projects />
+        {/* <Contact/> */}
       </main>
       <Footer />
     </>
@@ -48,7 +49,7 @@ export default function Home({
 export const getServerSideProps = async () => {
   const data = await sanityClient.fetch(`*[_type == "product"]`);
   const latestProduct = await sanityClient.fetch(
-    `*[_type == "product"] | order(_createdAt desc) [0]`
+    `*[_type == "project"] | order(_createdAt desc) [0]`
   );
   return {
     props: {

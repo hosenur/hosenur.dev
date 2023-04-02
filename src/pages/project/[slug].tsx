@@ -34,7 +34,7 @@ export default function Product({ data }: { data: any }) {
   );
 }
 export const getStaticPaths = async () => {
-  const data = await sanityClient.fetch(`*[_type == "product"]{
+  const data = await sanityClient.fetch(`*[_type == "project"]{
         _id,
         slug {
             current
@@ -50,7 +50,7 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps = async ({ params }: any) => {
   const data = await sanityClient.fetch(
-    `*[_type == "product" && slug.current == $slug][0]`,
+    `*[_type == "project" && slug.current == $slug][0]`,
     { slug: params.slug }
   );
   return {

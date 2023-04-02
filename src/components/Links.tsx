@@ -6,7 +6,7 @@ export default function Links() {
     
     <div className='max-w-5xl mx-auto px-5 flex justify-between'>
         <Link href={"/guestbook"}>GuestBook</Link>
-        <div>Projects</div>
+        <Link href={"/project"}>Projects</Link>
         <div>Contact</div>
     </div>
   )

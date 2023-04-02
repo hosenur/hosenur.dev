@@ -12,6 +12,8 @@ import {
   query,
 } from "firebase/firestore";
 import { useAuth } from "@/contexts/AuthContext";
+import Image from "next/image";
+import Links from "@/components/Links";
 type Signature = {
   text: string;
   name: string;
@@ -20,7 +22,7 @@ type Signature = {
 export default function Guestbook() {
   const [signatures, setSignatures] = useState([]);
   const [signature, setSignature] = useState("");
-  const handlePostSignature = async() => {
+  const handlePostSignature = async () => {
     const docRef = collection(db, "signatures");
     const payload = {
       text: signature,
@@ -42,6 +44,7 @@ export default function Guestbook() {
   return (
     <>
       <Header />
+      <Links/>
       <Head>
         <title>Guestbook</title>
         <meta
@@ -52,6 +55,17 @@ export default function Guestbook() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="max-w-5xl p-5 mx-auto font-bold space-y-5">
+        <div className="flex items-center">
+          <Image
+            src={
+              "https://ik.imagekit.io/kydj5j026nb/heart-pixel_hs3ac3RvK.svg"
+            }
+            width={200}
+            height={200}
+            alt="bolt"
+          />
+          <h1 className="text-9xl font-bold">GuestBook</h1>
+        </div>
         {!currentUser ? (
           <div className="flex space-y-5 flex-col">
             <p>
@@ -87,7 +101,7 @@ export default function Guestbook() {
           </div>
         )}
         {signatures.map((signature: Signature) => (
-          <div key={signature.text+signature.name}>
+          <div key={signature.text + signature.name}>
             <p>{signature.text}</p>
             <div className="text-sm">
               By {signature.name} {moment(signature.created).fromNow()}
