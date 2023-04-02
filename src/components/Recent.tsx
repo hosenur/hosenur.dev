@@ -20,7 +20,7 @@ export default function Recent({ data }: { data: any }) {
         alt="banner"
       />
       <p>{data.description}</p>
-      <Link className="text-info" href={`/product/${data.slug.current}`}>
+      <Link className="text-info" href={`/project/${data.slug.current}`}>
         Read More ↗️
       </Link>
     </div>
