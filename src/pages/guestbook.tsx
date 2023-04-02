@@ -51,6 +51,9 @@ export default function Guestbook() {
           name="description"
           content="Leave a message for the future visitors of my website, maybe a suggestion, review or even humor"
         />
+        <meta property="og:title" content="Guestbook" />
+        <meta property="og:description" content="Leave a message for the future visitors of my website, maybe a suggestion, review or even humor" />
+        <meta property="og:image" content="https://ik.imagekit.io/kydj5j026nb/GUestbookmy_life_BlZ_ZyhTI.png?updatedAt=1680448536282" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
