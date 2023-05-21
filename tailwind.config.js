@@ -7,7 +7,9 @@ module.exports = {
   ],
   darkMode: ["class"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: { "dank-mono" : ["var(--font-dank-mono)"] },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
-}
+};

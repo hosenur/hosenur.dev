@@ -1,6 +1,7 @@
 {
   "name": "hosenur.io",
   "version": "0.1.0",
+  "license": "unlicense",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -2,7 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
-import { kollektif } from "@/components/fonts";
+import { dankMono, kollektif } from "@/components/fonts";
 import Header from "@/components/Header";
 
 export const metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen bg-white text-slate-900 ${kollektif.className}`}
+        className={`antialiased min-h-screen bg-white text-slate-900 ${kollektif.className} ${dankMono.variable}`}
       >
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
           <div className="max-w-2xl mx-auto p-5">

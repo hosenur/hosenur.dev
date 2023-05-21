@@ -1,3 +1,9 @@
+---
+title: Pretty Codes
+description: CSS for rehype-pretty-code with Tailwind CSS
+---
+
+```css showLineNumbers title="syntax.css"
 div[data-rehype-pretty-code-fragment] {
   @apply font-dank-mono;
 }
@@ -27,3 +33,4 @@ code[data-line-numbers] .line::before {
   content: counter(lineNumber);
   @apply text-slate-500 inline-block text-right mr-2.5 w-4;
 }
+```
