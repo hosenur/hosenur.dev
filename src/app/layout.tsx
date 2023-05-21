@@ -1,5 +1,7 @@
 import { satoshi } from '@/utils/fonts'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 
 export const metadata = {
@@ -14,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={satoshi.className}>{children}</body>
+      <body className={satoshi.className+" bg-zinc-900 text-zinc-200 p-10"}>
+        <Header/>
+        <main>
+          {children}
+        </main>
+        <Footer/>
+      </body>
     </html>
   )
 }
