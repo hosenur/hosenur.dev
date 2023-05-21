@@ -1,4 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./syntax.css"
+@import "./syntax.css";
+::-webkit-scrollbar{
+    display: none;
+}

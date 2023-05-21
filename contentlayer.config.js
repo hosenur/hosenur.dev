@@ -30,10 +30,25 @@ export const Blog = defineDocumentType(() => ({
   },
   computedFields,
 }));
+export const Snippet = defineDocumentType(() => ({
+  name: "Blog",
+  filePathPattern: `snippet/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+  },
+  computedFields,
+}));
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Blog],
+  documentTypes: [Blog,Snippet],
   mdx: {
     rehypePlugins: [
       rehypeSlug,

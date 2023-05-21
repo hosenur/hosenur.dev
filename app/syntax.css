@@ -6,7 +6,7 @@ div[data-rehype-pretty-code-fragment] {
 }
 
 div[data-rehype-pretty-code-fragment] pre {
-  @apply px-0 my-2 overflow-x-auto leading-relaxed;
+  @apply px-2 my-2 overflow-x-auto leading-relaxed;
 }
 div[data-rehype-pretty-code-title] {
   font-size: 0.75rem;
@@ -38,5 +38,5 @@ code[data-line-numbers] .line::before {
   /* stylistic preferences */
   margin-right: 0.75rem;
   width: 1rem;
-  color: rgb(255 255 255 / 0.2);
+  @apply text-slate-500;
 }
