@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+div[data-rehype-pretty-code-fragment] {
+  font-family: "Space Mono", monospace;
+  /* stylist preferences */
+  border-radius: 0.5rem;
+}
+
+div[data-rehype-pretty-code-fragment] pre {
+  @apply px-0 my-2 overflow-x-auto leading-relaxed;
+}
+div[data-rehype-pretty-code-title] {
+  font-size: 0.75rem;
+  font-weight: 700;
+  /* line-height: 1rem;  */
+  @apply dark:text-white text-black;
+  margin: 0;
+}
+div[data-rehype-pretty-code-fragment] .line--highlighted {
+  background-color: #353e4b;
+}
+div[data-rehype-pretty-code-fragment] .line {
+  font-family: "Space Mono", monospace;
+}
+div[data-rehype-pretty-code-fragment] code {
+  display: grid;
+}
+
+code[data-line-numbers] {
+  counter-reset: lineNumber;
+}
+
+code[data-line-numbers] .line::before {
+  counter-increment: lineNumber;
+  content: counter(lineNumber);
+  display: inline-block;
+  text-align: right;
+
+  /* stylistic preferences */
+  margin-right: 0.75rem;
+  width: 1rem;
+  color: rgb(255 255 255 / 0.2);
+}

@@ -1,4 +1,7 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import rehypeCodeTitles from "rehype-code-titles";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeSlug from "rehype-slug";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -10,11 +13,11 @@ const computedFields = {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
-}
+};
 
-export const Page = defineDocumentType(() => ({
-  name: "Page",
-  filePathPattern: `pages/**/*.mdx`,
+export const Blog = defineDocumentType(() => ({
+  name: "Blog",
+  filePathPattern: `blogs/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -26,29 +29,23 @@ export const Page = defineDocumentType(() => ({
     },
   },
   computedFields,
-}))
-
-export const Post = defineDocumentType(() => ({
-  name: "Post",
-  filePathPattern: `posts/**/*.mdx`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-    date: {
-      type: "date",
-      required: true,
-    },
-  },
-  computedFields,
-}))
+}));
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Post, Page],
-})
+  documentTypes: [Blog],
+  mdx: {
+    rehypePlugins: [
+      rehypeSlug,
+      [
+        rehypePrettyCode,
+        {
+          theme: "material-theme",
+          onVisitHighlightedLine(node) {
+            node.properties.className.push("line--highlighted");
+          },
+        },
+      ],
+    ],
+  },
+});
