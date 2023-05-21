@@ -1,34 +1,31 @@
 {
-  "name": "hosenur.io",
+  "name": "next-contentlayer",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "preview": "next build && next start",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@reacticons/ionicons": "^7.1.0",
-    "@types/node": "20.2.1",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "18.16.1",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.1",
+    "@vercel/analytics": "^1.0.0",
+    "autoprefixer": "10.4.14",
     "contentlayer": "^0.3.2",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
-    "next": "13.4.2",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "next": "13.4.1",
+    "next-contentlayer": "^0.3.2",
+    "next-themes": "^0.2.1",
+    "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-fast-marquee": "^1.5.2",
-    "rehype-autolink-headings": "^6.1.1",
-    "rehype-pretty-code": "^0.9.5",
-    "rehype-slug": "^5.1.0",
-    "remark-gfm": "^3.0.1",
+    "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.2"
   }
 }
