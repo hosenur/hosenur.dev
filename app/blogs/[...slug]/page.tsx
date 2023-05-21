@@ -3,7 +3,7 @@ import { allBlogs } from "contentlayer/generated"
 
 import { Metadata } from "next"
 import { Mdx } from "@/components/mdx-components"
-import { dankMono } from "@/components/fonts"
+import Head from "next/head"
 
 interface PostProps {
   params: {
@@ -51,6 +51,10 @@ export default async function BlogPage({ params }: PostProps) {
   }
 
   return (
+    <>
+    <Head>
+      <title>{post.title}</title>
+    </Head>
     <article className={`py-6 prose dark:prose-invert`}>
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
@@ -61,5 +65,6 @@ export default async function BlogPage({ params }: PostProps) {
       <hr className="my-4" />
       <Mdx code={post.body.code} />
     </article>
+    </>
   )
 }

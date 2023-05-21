@@ -41,6 +41,14 @@ export const Snippet = defineDocumentType(() => ({
     },
     description: {
       type: "string",
+      required: true,
+    },
+    banner: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: true,
     },
   },
   computedFields,
@@ -48,14 +56,14 @@ export const Snippet = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Blog,Snippet],
+  documentTypes: [Blog, Snippet],
   mdx: {
     rehypePlugins: [
       rehypeSlug,
       [
         rehypePrettyCode,
         {
-          theme: "nord",
+          theme: "dracula",
           onVisitHighlightedLine(node) {
             node.properties.className.push("line--highlighted");
           },
