@@ -31,8 +31,8 @@ export const Blog = defineDocumentType(() => ({
   computedFields,
 }));
 export const Snippet = defineDocumentType(() => ({
-  name: "Blog",
-  filePathPattern: `snippet/**/*.mdx`,
+  name: "Snippet",
+  filePathPattern: `snippets/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
