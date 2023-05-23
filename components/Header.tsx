@@ -6,9 +6,9 @@ export default function Header() {
     <header>
       <nav className="space-x-5 flex items-center">
         <Link href="/">Home</Link>
-        <Link href="/about">Projects</Link>
-        <Link href="/about">Blog</Link>
-        <Link href="/about">Snippets</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/blogs">Blog</Link>
+        <Link href="/snippets">Snippets</Link>
       </nav>
     </header>
   );
