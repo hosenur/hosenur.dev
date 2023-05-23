@@ -1,60 +1,61 @@
-import { notFound } from "next/navigation"
-import { allBlogs } from "contentlayer/generated"
+import { notFound } from "next/navigation";
+import { allBlogs } from "contentlayer/generated";
 
-import { Metadata } from "next"
-import { Mdx } from "@/components/mdx-components"
-import Head from "next/head"
+import { Metadata } from "next";
+import { Mdx } from "@/components/mdx-components";
+import Head from "next/head";
 
 interface PostProps {
   params: {
-    slug: string[]
-  }
+    slug: string[];
+  };
 }
 
 async function getPostFromParams(params: PostProps["params"]) {
-  const slug = params?.slug?.join("/")
-  const blog = allBlogs.find((blog) => blog.slugAsParams === slug)
+  const slug = params?.slug?.join("/");
+  const blog = allBlogs.find((blog) => blog.slugAsParams === slug);
 
   if (!blog) {
-    null
+    null;
   }
 
-  return blog
+  return blog;
 }
 
 export async function generateMetadata({
   params,
 }: PostProps): Promise<Metadata> {
-  const post = await getPostFromParams(params)
+  const blog = await getPostFromParams(params);
 
-  if (!post) {
-    return {}
+  if (!blog) {
+    return {};
   }
 
   return {
-    title: post.title,
-    description: post.description,
-  }
+    title: blog.title,
+    description: blog.description,
+    openGraph :{
+      title: blog.title,
+      description: blog.description,
+      images: [blog.title]
+    }
+  };
 }
 
 export async function generateStaticParams(): Promise<PostProps["params"][]> {
   return allBlogs.map((blog) => ({
     slug: blog.slugAsParams.split("/"),
-  }))
+  }));
 }
 
 export default async function BlogPage({ params }: PostProps) {
-  const post = await getPostFromParams(params)
+  const post = await getPostFromParams(params);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   return (
-    <>
-    <Head>
-      <title>{post.title}</title>
-    </Head>
     <article className={`py-6 prose dark:prose-invert`}>
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
@@ -65,6 +66,5 @@ export default async function BlogPage({ params }: PostProps) {
       <hr className="my-4" />
       <Mdx code={post.body.code} />
     </article>
-    </>
-  )
+  );
 }

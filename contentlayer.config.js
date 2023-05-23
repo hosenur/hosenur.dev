@@ -45,6 +45,7 @@ export const Snippet = defineDocumentType(() => ({
     },
     banner: {
       type: "string",
+      required: true,
     },
     date: {
       type: "date",

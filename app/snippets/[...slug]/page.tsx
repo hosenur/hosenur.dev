@@ -34,6 +34,16 @@ export async function generateMetadata({
   return {
     title: snippet.title,
     description: snippet.description,
+    openGraph: {
+      title: snippet.title,
+      description: snippet.description,
+      images: [snippet.banner],
+    },
+    twitter: {
+      title: snippet.title,
+      description: snippet.description,
+      images: [snippet.banner],
+    },
   };
 }
 
