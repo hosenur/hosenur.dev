@@ -2,6 +2,7 @@ import "./globals.css";
 import { dankMono, kollektif } from "@/utils/fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
 
 interface RootLayoutProps {
   children: React.ReactNode;

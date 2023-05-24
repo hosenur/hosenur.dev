@@ -37,7 +37,7 @@ export async function generateMetadata({
     openGraph :{
       title: blog.title,
       description: blog.description,
-      images: [blog.title]
+      images: [blog.banner]
     }
   };
 }
