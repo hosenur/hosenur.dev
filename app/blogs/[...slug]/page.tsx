@@ -3,8 +3,6 @@ import { allBlogs } from "contentlayer/generated";
 
 import { Metadata } from "next";
 import { Mdx } from "@/components/mdx-components";
-import Head from "next/head";
-
 interface PostProps {
   params: {
     slug: string[];

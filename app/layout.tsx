@@ -3,6 +3,7 @@ import { dankMono, kollektif } from "@/utils/fonts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/react';
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <main className="py-5">{children}</main>
           <Footer />
         </div>
-        {/* <Analytics /> */}
+        <Analytics />
         {/* </ThemeProvider> */}
       </body>
     </html>
