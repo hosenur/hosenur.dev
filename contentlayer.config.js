@@ -77,6 +77,9 @@ export const Snippet = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+    language: {
+      type: "string",
+    },
     date: {
       type: "date",
       required: true,
