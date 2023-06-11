@@ -4,7 +4,7 @@ const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: { domains: ["ik.imagekit.io"] },
+  images: { domains: ["ik.imagekit.io","cdn.jsdelivr.net","resources.jetbrains.com"] },
 };
 
 module.exports = withContentlayer(nextConfig);
