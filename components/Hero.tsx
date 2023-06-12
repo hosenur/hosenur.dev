@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { bold } from "@/utils/fonts";
 export default function Hero() {
   return (
-    <div className="flex gap-5 flex-col">
+    <div className="flex gap-5 flex-col ">
 
     <div className="flex gap-5 items-center">
       <Image
@@ -15,7 +16,7 @@ export default function Hero() {
         }
       />
       <div className="flex flex-col">
-        <h1 className="font-bold text-2xl">hosenur rahaman</h1>
+        <h1 className={"text-2xl "+bold.className}>hosenur rahaman</h1>
         <p>Full Stack Web Developer& App Developer</p>
       </div>
     </div>
