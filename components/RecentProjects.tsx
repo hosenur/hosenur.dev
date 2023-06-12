@@ -25,7 +25,6 @@ export default function RecentProjects() {
               width={1920}
               height={1440}
             />
-            <h1>{project.title}</h1>
           </div>
         ))}
       </div>
