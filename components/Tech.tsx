@@ -34,7 +34,7 @@ export default function Tech() {
         alt="kotlin"
         width={1000}
         height={1000}
-        className="w-20 mx-5 my-2.5"
+        className="h-4 w-auto mx-5 my-2.5"
         src={
           "https://ik.imagekit.io/hosenur/IO/Kotlin_Monochrome_Logo_White_RGB.png?updatedAt=1686690566566"
         }
@@ -57,25 +57,16 @@ export default function Tech() {
         alt="flutter"
         width={1000}
         height={1000}
-        className="w-20 mx-5 my-2.5"
+        className="h-5 w-auto mx-5 my-2.5"
         src={
           "https://ik.imagekit.io/hosenur/IO/683514c5660dbe52f5ba.png?updatedAt=1686690566517"
-        }
-      />
-      <Image
-        alt="nuxt"
-        width={1000}
-        height={1000}
-        className="w-20 mx-5 my-2.5"
-        src={
-          "https://ik.imagekit.io/hosenur/IO/full-logo-white.png?updatedAt=1686690728454"
         }
       />
       <Image
         alt="expo"
         width={1000}
         height={1000}
-        className="w-20 mx-5 my-2.5"
+        className="h-5 w-auto mx-5 my-2.5"
         src={
           "https://ik.imagekit.io/hosenur/IO/logo-wordmark-light.png?updatedAt=1686690867305"
         }
