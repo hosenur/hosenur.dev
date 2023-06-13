@@ -13,7 +13,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased  bg-zinc-900 text-zinc-100 py-5  ${kollektif.className} ${dankMono.variable}`}
+        className={`  bg-zinc-900 text-zinc-100 py-5  ${kollektif.className} ${dankMono.variable}`}
       >
         <Header />
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
