@@ -21,6 +21,15 @@ export default function Tech() {
         }
       />
       <Image
+        alt="tw"
+        width={1000}
+        height={1000}
+        className="w-20 mx-5 my-2.5 grayscale"
+        src={
+          "https://ik.imagekit.io/hosenur/IO/tailwindcss-logotype-white.svg"
+        }
+      />
+      <Image
         alt="kotlin"
         width={1000}
         height={1000}
