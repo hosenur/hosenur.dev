@@ -9,6 +9,7 @@ export default function Header() {
       <div className="text-xl flex items-center gap-2.5">
         <IonIcon name="logo-github" />
         <IonIcon name="logo-twitter" />
+        <IonIcon name="logo-instagram" />
       </div>
       <h1 className={silkscreen.className +" text-center text-lg"}>Hosenur</h1>
       <nav className="space-x-5 flex items-center">
