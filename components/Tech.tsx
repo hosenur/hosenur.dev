@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 export default function Tech() {
   return (
-    <Marquee gradient={true} gradientWidth={500} autoFill={true} gradientColor={[24, 24, 27]}>
-
+    <Marquee
+      gradient={true}
+      gradientWidth={500}
+      autoFill={true}
+      gradientColor={[24, 24, 27]}
+      pauseOnHover
+    >
       <Image
         alt="next.js"
         width={1000}
@@ -21,7 +26,7 @@ export default function Tech() {
         height={1000}
         className="w-20 mx-5 my-2.5"
         src={
-          "https://ik.imagekit.io/hosenur/IO/Kotlin_Full_Color_Logo_on_Black_RGB.png?updatedAt=1686689050448"
+          "https://ik.imagekit.io/hosenur/IO/Kotlin_Monochrome_Logo_White_RGB.png?updatedAt=1686690566566"
         }
       />
       <Image
@@ -29,17 +34,40 @@ export default function Tech() {
         width={1000}
         height={1000}
         className="w-20 mx-5 my-2.5"
-        src={
-          "https://ik.imagekit.io/hosenur/IO/built-with-appwrite__1_.svg"
-        }
+        src={"https://ik.imagekit.io/hosenur/IO/built-with-appwrite__1_.svg"}
       />
       <Image
-        alt="kotlin"
+        alt="firebase"
+        width={1000}
+        height={1000}
+        className="w-20 mx-5 my-2.5"
+        src={"https://ik.imagekit.io/hosenur/IO/Firebase_Logo_Knockout.svg"}
+      />
+      <Image
+        alt="flutter"
         width={1000}
         height={1000}
         className="w-20 mx-5 my-2.5"
         src={
-          "https://ik.imagekit.io/hosenur/IO/Firebase_Logo_Knockout.svg"
+          "https://ik.imagekit.io/hosenur/IO/683514c5660dbe52f5ba.png?updatedAt=1686690566517"
+        }
+      />
+      <Image
+        alt="nuxt"
+        width={1000}
+        height={1000}
+        className="w-20 mx-5 my-2.5"
+        src={
+          "https://ik.imagekit.io/hosenur/IO/full-logo-white.png?updatedAt=1686690728454"
+        }
+      />
+      <Image
+        alt="expo"
+        width={1000}
+        height={1000}
+        className="w-20 mx-5 my-2.5"
+        src={
+          "https://ik.imagekit.io/hosenur/IO/logo-wordmark-light.png?updatedAt=1686690867305"
         }
       />
     </Marquee>
