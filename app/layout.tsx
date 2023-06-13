@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import Curosr from "@/components/Curosr";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <main className="max-w-4xl mx-auto   flex flex-col gap-10 py-20">{children}</main>
         <Footer />
         <Analytics />
+        <Curosr/>
         {/* </ThemeProvider> */}
       </body>
     </html>

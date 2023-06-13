@@ -4,6 +4,7 @@ import RecentBlogs from "@/components/RecentBlogs";
 import RecentProjects from "@/components/RecentProjects";
 import Hero from "../components/Hero";
 import Tech from "@/components/Tech";
+import TimeLine from "@/components/TimeLine";
 export const metadata = {
   title: "Hosenur",
   description: "Personal blog of Hosenur Uzun",
@@ -16,6 +17,7 @@ export default function Home() {
       <Tech/>
       <RecentProjects/>
       <RecentBlogs />
+      <TimeLine/>
     </div>
   );
 }

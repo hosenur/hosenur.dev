@@ -5,6 +5,7 @@ import Image from "next/image";
 export default function Tech() {
   return (
     <Marquee
+    className="-z-50"
       gradient={true}
       gradientWidth={500}
       autoFill={true}
