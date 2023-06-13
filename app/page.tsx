@@ -3,6 +3,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import RecentBlogs from "@/components/RecentBlogs";
 import RecentProjects from "@/components/RecentProjects";
 import Hero from "../components/Hero";
+import Tech from "@/components/Tech";
 export const metadata = {
   title: "Hosenur",
   description: "Personal blog of Hosenur Uzun",
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-5 min-h-screen">
       <Hero/>
+      <Tech/>
       <RecentProjects/>
       <RecentBlogs />
     </div>
