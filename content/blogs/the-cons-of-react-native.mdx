@@ -1,0 +1,33 @@
+---
+title: The Cons of React Native
+description: What I feel makes React Native a little less appealing way to build mobile apps.
+banner: https://ik.imagekit.io/hosenur/hyper__1_.png
+---
+
+![banner](https://ik.imagekit.io/hosenur/hyper__1_.png?updatedAt=1684886665321)
+
+Since the past 2 years I have been building hybrid mobile applications with React Native, being a React developer made it feel like home while building apps with React Native, being able to reuse a large chunk of code, integrating with backends and other services was all same.But there were parts of React Native which had very poor developer experience, one such thing is heavy reliance on third party libraries for basic functionalities like navigation, animations, gestures etc, if you are lucky to find a good library which suits your needs there comes compatibility issues
+
+## The Good Sides
+
+- Code Reusability - Being able to reuse a large chunk of code between web and mobile is a huge plus, it saves a lot of time and effort.
+- Multiplatform - React Native is a multiplatform framework, you can build apps for both Android and iOS with the same codebase.
+- Easy to build UI - Building UIs in React Native feels easy if you are already from a web development background, reusable and customizable components can be styled using the same attributes as CSS, here is a simple example of styling in React Native and CSS with the slightest differences highlighted
+
+```jsx showLineNumbers title="React Native" {5}
+const styles = StyleSheet.create({
+  box: {
+    padding: 10,
+    margin: 10,
+    backgroundColor: "red",
+  },
+});
+```
+
+```css showLineNumbers title="CSS" {4}
+  .box{
+    padding: 10,
+    margin: 10,
+    background-color: red,
+  },
+```

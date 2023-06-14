@@ -61,7 +61,6 @@ export default async function BlogPage({ params }: PostProps) {
           {post.description}
         </p>
       )}
-      <hr className="my-2.5" />
       <Mdx code={post.body.code} />
     </article>
   );

@@ -6,10 +6,10 @@ div[data-rehype-pretty-code-fragment] pre {
   @apply px-0 my-2 overflow-x-auto leading-relaxed;
 }
 div[data-rehype-pretty-code-title] {
-  @apply dark:text-white text-black font-bold m-0;
+  @apply  text-white font-medium m-0;
 }
 div[data-rehype-pretty-code-fragment] .line--highlighted {
-  background-color: #353e4b;
+  @apply bg-zinc-900
 }
 div[data-rehype-pretty-code-fragment] .line {
   @apply px-2;

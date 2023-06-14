@@ -19,7 +19,12 @@ export default function Hero() {
           <p>Full Stack Web Developer& App Developer</p>
         </div>
       </div>
-      <p>I craft websites with React,Next.js, Svelte and Sveltekit and also mobile apps with React Native or Kotlin, integrated with battle tested backend services like Firebase, AppWrite or sometimes a backend I build up from scratch.</p>
+      <p>
+        I craft websites with React,Next.js, Svelte and Sveltekit and also
+        mobile apps with React Native or Kotlin, integrated with battle tested
+        backend services like Firebase, AppWrite or sometimes a backend I build
+        up from scratch.
+      </p>
     </div>
   );
 }
