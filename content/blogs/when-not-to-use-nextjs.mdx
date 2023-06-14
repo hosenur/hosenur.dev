@@ -5,6 +5,7 @@ banner: https://ik.imagekit.io/hosenur/hyper__1_.png
 ---
 
 ![banner](https://ik.imagekit.io/hosenur/IO/when_not_to_use.png?updatedAt=1686776249833)
+> When you have a hammer, everything looks like a nail
 
 React, built by Facebook is the most popular UI library, and Next.js built on top of it is the most popular full stack meta framework for react. The latest Next.js release v13 packs a lot of new features like the app router, react server side components, server actions, taking Next.js completely server side by default, which super enhances the performance
 To bootstrap a simple Next.js project you can use the following command:
@@ -12,4 +13,4 @@ To bootstrap a simple Next.js project you can use the following command:
 ```bash
 npx create-next-app my-app
 ```
-But for me depending on the project, I don't always prefer using Next.js. For example, I was working on a project which was a ML solution based project where requests to backend were made only and only after taking some form of user input, which was then posted to API through a hook, which when returned reponse was comsumed to show the results, this is a perfect example of a scenario where I think Next.js is not the best choice, 
+But for me depending on the project, I don't always prefer using Next.js. For example, I was working on a project which was a ML solution based project where requests to backend were made only and only after taking some form of user input, which was then posted to API through a hook, which when returned reponse was mutated and modified accordingly to show the results, this is a perfect example of a scenario where I think Next.js is not the best choice, because the site is highly interactive and heavily depended on user input. A better approach would be to use React with Vite, and use TanStack query or SWR for making the requests, following this approach will also remove the extra work to explicitly specify *useClient* in every component where we are performing operations on the results in the client side.
