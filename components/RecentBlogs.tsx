@@ -2,6 +2,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import { allBlogs } from "@/.contentlayer/generated";
 import React from "react";
 import Link from "next/link";
+import { bold } from "@/utils/fonts";
 
 export default function RecentBlogs() {
   return (
@@ -20,7 +21,7 @@ export default function RecentBlogs() {
         {allBlogs.map((blog) => (
           <article key={blog._id}>
             <Link href={blog.slug}>
-              <h2 className="font-bold">{blog.title}</h2>
+              <h2 className={bold.className}>{blog.title}</h2>
             </Link>
             <p>{blog.description}</p>
           </article>

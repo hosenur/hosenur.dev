@@ -16,7 +16,7 @@ export default function RecentProjects() {
           <ArrowUpRightIcon className="w-6 h-6" />
         </Link>
       </div>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {allProjects.map((project) => (
           <div className="flex flex-col" key={project._id}>
             <Image

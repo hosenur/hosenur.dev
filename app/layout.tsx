@@ -16,7 +16,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Header />
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
-        <main className="max-w-4xl mx-auto   flex flex-col gap-10 py-20">{children}</main>
+        <main className="max-w-4xl mx-auto   flex flex-col gap-10 py-20 ">{children}</main>
         <Footer />
         <Analytics />
         {/* </ThemeProvider> */}

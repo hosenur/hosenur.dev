@@ -54,14 +54,14 @@ export default async function BlogPage({ params }: PostProps) {
   }
 
   return (
-    <article className={`py-6 prose dark:prose-invert`}>
+    <article className={"py-5 prose prose-invert prose-emerald max-w-4xl px-0"}>
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
-        <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
+        <p className="text-xl mt-0">
           {post.description}
         </p>
       )}
-      <hr className="my-4" />
+      <hr className="my-2.5" />
       <Mdx code={post.body.code} />
     </article>
   );
