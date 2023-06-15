@@ -8,8 +8,8 @@ export default function Blog(blog: Blog) {
       <Link href={blog.slug}>
         <h2 className={"text-lg  font-medium"}>{blog.title}</h2>
       </Link>
-      <p className="text-zinc-500">{blog.description}</p>
-      <p className="text-sm text-zinc-500">Published {moment(blog.publishedAt).fromNow()}</p>
+      <p className="text-zinc-400">{blog.description}</p>
+      <p className="text-sm text-zinc-400">Published {moment(blog.publishedAt).fromNow()}</p>
     </article>
   );
 }

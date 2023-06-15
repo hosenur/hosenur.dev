@@ -16,10 +16,10 @@ export default function Hero() {
         />
         <div className="flex flex-col">
           <h1 className={"text-2xl " + bold.className}>hosenur rahaman</h1>
-          <p>Full Stack Web Developer& App Developer</p>
+          <p className="text-zinc-400">Full Stack Web Developer& App Developer</p>
         </div>
       </div>
-      <p>
+      <p className="text-zinc-400">
         I craft websites with React,Next.js, Svelte and Sveltekit and also
         mobile apps with React Native or Kotlin, integrated with battle tested
         backend services like Firebase, AppWrite or sometimes a backend I build
