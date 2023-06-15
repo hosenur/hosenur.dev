@@ -16,7 +16,7 @@ export default function Hero() {
         />
         <div className="flex flex-col">
           <h1 className={"text-2xl " + bold.className}>hosenur rahaman</h1>
-          <p className="text-zinc-400">Full Stack Web Developer& App Developer</p>
+          <p className="text-zinc-400">Full Stack Web Developer & App Developer</p>
         </div>
       </div>
       <p className="text-zinc-400">
