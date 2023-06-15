@@ -27,6 +27,10 @@ export const Blog = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    publishedAt: {
+      type: "date", 
+      required: true,
+    },
     banner: {
       type: "string",
       required: true,

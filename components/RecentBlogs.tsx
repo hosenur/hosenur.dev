@@ -2,6 +2,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
 import { allBlogs } from "@/.contentlayer/generated";
 import React from "react";
 import Link from "next/link";
+import Blog from "./Blog";
 
 export default function RecentBlogs() {
   return (
@@ -18,12 +19,7 @@ export default function RecentBlogs() {
       </div>
       <div className="flex flex-col gap-2">
         {allBlogs.map((blog) => (
-          <article key={blog._id}>
-            <Link href={blog.slug}>
-              <h2 className={"text-lg  font-medium"}>{blog.title}</h2>
-            </Link>
-            <p>{blog.description}</p>
-          </article>
+          <Blog key={blog._id} {...blog} />
         ))}
       </div>
     </div>
