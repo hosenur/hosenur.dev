@@ -14,9 +14,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`  bg-zinc-900 text-zinc-100 py-5  ${kollektif.className} ${dankMono.variable}`}
       >
-        <Header />
         {/* <ThemeProvider attribute="class" defaultTheme="system" enableSystem> */}
-        <main className="max-w-4xl mx-auto   flex flex-col gap-10 py-20 ">{children}</main>
+        <Header />
+        <main className="max-w-4xl mx-auto px-5 md:px-0   flex flex-col gap-10 py-20 ">
+          {children}
+        </main>
         <Footer />
         <Analytics />
         {/* </ThemeProvider> */}
