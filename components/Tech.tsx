@@ -6,8 +6,7 @@ export default function Tech() {
   return (
     <Marquee
     className="-z-50"
-      gradient={true}
-      gradientWidth={500}
+      gradient={true}    
       autoFill={true}
       gradientColor={[24, 24, 27]}
       pauseOnHover
