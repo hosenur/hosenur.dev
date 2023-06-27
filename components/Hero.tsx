@@ -21,7 +21,7 @@ export default function Hero() {
       </div>
       <p className="text-zinc-400">
         I craft websites with React,Next.js, Svelte and Sveltekit and also
-        mobile apps with React Native or Kotlin, integrated with battle tested
+        mobile apps with React Native and Flutter, integrated with battle tested
         backend services like Firebase, AppWrite or sometimes a backend I build
         up from scratch.
       </p>

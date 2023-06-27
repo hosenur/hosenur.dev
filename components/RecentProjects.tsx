@@ -18,14 +18,20 @@ export default function RecentProjects() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {allProjects.map((project) => (
-          <div className="flex flex-col" key={project._id}>
+          <Link
+          href={project.slug} 
+          
+          className="flex flex-col gap-2" key={project._id}>
             <Image
               src={project.banner}
               alt="banner"
               width={1920}
               height={1440}
             />
-          </div>
+            <span>
+              {project.title}
+            </span>
+          </Link>
         ))}
       </div>
     </div>
