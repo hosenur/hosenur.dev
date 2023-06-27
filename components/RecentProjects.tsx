@@ -17,7 +17,7 @@ export default function RecentProjects() {
         </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        {allProjects.map((project) => (
+        {allProjects.slice(0, 4).map((project) => (
           <Link
             href={project.slug}
             className="flex flex-col gap-2"
