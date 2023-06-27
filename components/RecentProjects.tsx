@@ -9,7 +9,7 @@ export default function RecentProjects() {
       <div className="flex justify-between">
         <span>LATEST PROJECTS</span>
         <Link
-          href={"/blogs"}
+          href={"/projects"}
           className="flex items-center space-x-1 text-slate-500"
         >
           <span>VIEW ALL</span>
@@ -19,18 +19,19 @@ export default function RecentProjects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {allProjects.map((project) => (
           <Link
-          href={project.slug} 
-          
-          className="flex flex-col gap-2" key={project._id}>
+            href={project.slug}
+            className="flex flex-col gap-2"
+            key={project._id}
+          >
             <Image
               src={project.banner}
               alt="banner"
               width={1920}
               height={1440}
             />
-            <span>
-              {project.title}
-            </span>
+            <div className="flex justify-between">
+              <span>{project.title}</span>
+            </div>
           </Link>
         ))}
       </div>
