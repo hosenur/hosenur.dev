@@ -8,10 +8,16 @@ export default function Header() {
     <header className="fixed w-full">
       <div className="px-5">
         <div className="grid grid-cols-3 border  items-center max-w-4xl mx-auto header px-5 py-2.5 rounded-full">
-          <div className="text-xl hidden md:flex items-center gap-2.5">
-            <IonIcon name="logo-github" />
-            <IonIcon name="logo-twitter" />
-            <IonIcon name="logo-instagram" />
+          <div className="text-xl hidden md:flex gap-2.5 ">
+            <Link href="https://github.com/hosenur" className=" flex">
+              <IonIcon name="logo-github" />
+            </Link>
+            <Link href="https://twitter.com/hosenurdev" className=" flex">
+              <IonIcon name="logo-twitter" />
+            </Link>
+            <Link href="https://instagram.com/hosenur.io" className=" flex">
+              <IonIcon name="logo-instagram" />
+            </Link>
           </div>
           <h1 className={silkscreen.className + " text-center text-lg"}>
             <span className="text-emerald-500">H</span>

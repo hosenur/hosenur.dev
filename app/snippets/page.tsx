@@ -6,5 +6,14 @@ export const metadata = {
 };
 
 export default function Snippets() {
-  return <div>Snippets</div>;
+  return (
+    <div>
+      {allSnippets.map((snippet) => (
+        <div key={snippet._id}>
+          <h1>{snippet.title}</h1>
+          <p>{snippet.description}</p>
+        </div>
+      ))}
+    </div>
+  );
 }
