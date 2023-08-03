@@ -7,10 +7,10 @@
 }
 .header {
   /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  
 }
 /* body{
   background-image: url("https://ik.imagekit.io/hosenur/IO/bg.svg");

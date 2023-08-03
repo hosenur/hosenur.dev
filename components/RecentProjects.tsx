@@ -16,7 +16,7 @@ export default function RecentProjects() {
           <ArrowUpRightIcon className="w-6 h-6" />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {allProjects.slice(0, 4).map((project) => (
           <Link
             href={project.slug}
@@ -29,9 +29,9 @@ export default function RecentProjects() {
               width={1920}
               height={1440}
             />
-            <div className="flex justify-between">
+            {/* <div className="flex justify-between">
               <span>{project.title}</span>
-            </div>
+            </div> */}
           </Link>
         ))}
       </div>

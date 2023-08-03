@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="fixed w-full">
       <div className="px-5">
-        <div className="grid grid-cols-3 border  items-center max-w-4xl mx-auto header px-5 py-2.5 rounded-full">
+        <div className="grid grid-cols-3   items-center max-w-4xl mx-auto header px-5 py-2.5 rounded-full">
           <div className="text-xl hidden md:flex gap-2.5 ">
             <Link href="https://github.com/hosenur" className=" flex">
               <IonIcon name="logo-github" />
