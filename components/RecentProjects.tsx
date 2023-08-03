@@ -16,7 +16,7 @@ export default function RecentProjects() {
           <ArrowUpRightIcon className="w-6 h-6" />
         </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 group">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 group z-0">
         {allProjects.slice(0, 4).map((project) => (
           <Link
             href={project.slug}

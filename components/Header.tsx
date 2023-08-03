@@ -5,7 +5,7 @@ import { silkscreen } from "@/utils/fonts";
 
 export default function Header() {
   return (
-    <header className="fixed w-full">
+    <header className="fixed w-full z-10">
       <div className="px-5">
         <div className="grid grid-cols-3   items-center max-w-4xl mx-auto header px-5 py-2.5 rounded-full">
           <div className="text-xl hidden md:flex gap-2.5 ">

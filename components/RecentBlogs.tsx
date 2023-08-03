@@ -11,7 +11,7 @@ export default function RecentBlogs() {
         <span>RECENT BLOGS</span>
         <Link
           href={"/blogs"}
-          className="flex items-center space-x-1 text-slate-500"
+          className="flex items-center space-x-1 text-zinc-400"
         >
           <span>VIEW ALL</span>
           <ArrowUpRightIcon className="w-6 h-6" />

@@ -5,6 +5,7 @@ export default function Hero() {
   return (
     <div className="flex gap-5 flex-col ">
       <div className="flex gap-5 items-center">
+          
         <Image
           width={1000}
           height={1000}
