@@ -1,3 +1,5 @@
+const { text } = require("stream/consumers");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,7 +10,7 @@ module.exports = {
   darkMode: ["class"],
   theme: {
     extend: {
-      fontFamily: { "dank-mono" : ["var(--font-dank-mono)"] },
+      fontFamily: { "dank-mono": ["var(--font-dank-mono)"] },
     },
   },
   plugins: [require("@tailwindcss/typography")],
