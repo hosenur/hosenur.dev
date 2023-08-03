@@ -10,7 +10,7 @@ export default function RecentProjects() {
         <span>LATEST PROJECTS</span>
         <Link
           href={"/projects"}
-          className="flex items-center space-x-1 text-slate-500"
+          className="flex items-center space-x-1 text-zinc-400"
         >
           <span>VIEW ALL</span>
           <ArrowUpRightIcon className="w-6 h-6" />
@@ -28,11 +28,8 @@ export default function RecentProjects() {
               alt="banner"
               width={1920}
               height={1440}
-              className="group-hover:opacity-40 transition-opacity duration-300 hover:!opacity-80"
+              className="group-hover:opacity-40 transition-opacity duration-300 hover:!opacity-80 rounded"
             />
-            {/* <div className="flex justify-between">
-              <span>{project.title}</span>
-            </div> */}
           </Link>
         ))}
       </div>
