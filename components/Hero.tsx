@@ -23,7 +23,7 @@ export default function Hero() {
         I craft websites with React,Next.js, Svelte and Sveltekit and also
         mobile apps with React Native and Flutter, integrated with battle tested
         backend services like Firebase, AppWrite or sometimes a backend I build
-        up from scratch.
+        up from scratch. Here is my go to tech stack 👇
       </p>
     </div>
   );

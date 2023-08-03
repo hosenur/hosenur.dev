@@ -29,15 +29,7 @@ export default function Tech() {
           "https://ik.imagekit.io/hosenur/IO/tailwindcss-logotype-white.svg"
         }
       />
-      <Image
-        alt="kotlin"
-        width={1000}
-        height={1000}
-        className="h-4 w-auto mx-5 my-2.5"
-        src={
-          "https://ik.imagekit.io/hosenur/IO/Kotlin_Monochrome_Logo_White_RGB.png?updatedAt=1686690566566"
-        }
-      />
+
       <Image
         alt="kotlin"
         width={1000}
