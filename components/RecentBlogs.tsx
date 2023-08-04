@@ -17,11 +17,11 @@ export default function RecentBlogs() {
           <ArrowUpRightIcon className="w-6 h-6" />
         </Link>
       </div>
-      <div className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-2 list-disc">
         {allBlogs.map((blog) => (
           <Blog key={blog._id} {...blog} />
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
