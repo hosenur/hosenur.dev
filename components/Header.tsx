@@ -9,14 +9,14 @@ export default function Header() {
       <div className="px-5">
         <div className="grid grid-cols-3   items-center max-w-4xl mx-auto header px-5 py-2.5 rounded-full">
           <div className="text-xl hidden md:flex gap-2.5 ">
-            <Link href="https://github.com/hosenur" className=" flex">
+            <Link target="_blank" href="https://github.com/hosenur" className=" flex">
               <IonIcon name="logo-github" />
             </Link>
-            <Link href="https://twitter.com/hosenurdev" className=" flex">
+            <Link target="_blank" href="https://twitter.com/hosenurdev" className=" flex">
               <IonIcon name="logo-twitter" />
             </Link>
-            <Link href="https://instagram.com/hosenur.io" className=" flex">
-              <IonIcon name="logo-instagram" />
+            <Link target="_blank" href="https://linkedin.com/in/hosenur" className=" flex">
+              <IonIcon name="logo-linkedin" />
             </Link>
           </div>
           <h1 className={silkscreen.className + " text-center text-lg"}>
