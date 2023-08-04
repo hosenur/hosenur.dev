@@ -28,7 +28,7 @@ export default function RecentProjects() {
               alt="banner"
               width={1920}
               height={1440}
-              className="group-hover:opacity-40 transition-opacity duration-300 hover:!opacity-80 rounded"
+              className="group-hover:opacity-40 transition-opacity duration-300 hover:!opacity-100 rounded"
             />
           </Link>
         ))}
