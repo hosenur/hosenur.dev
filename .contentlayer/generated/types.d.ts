@@ -32,6 +32,7 @@ export type Project = {
   reposiroty?: string | undefined
   url?: string | undefined
   banner: string
+  publishedAt: IsoDateTimeString
   /** MDX file body */
   body: MDX
   slug: string

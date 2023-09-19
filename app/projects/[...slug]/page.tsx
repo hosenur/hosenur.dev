@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Metadata } from "next";
 import { MDX } from "@/components/MDXComponents";
-
+import moment from "moment";
 interface ProjectProps {
     params: {
         slug: string[];
@@ -61,10 +61,9 @@ export default async function ProjectPage({ params }: ProjectProps) {
     }
 
     return (
-        <article className={"py-5 prose prose-invert prose-emerald max-w-4xl px-0"}>
-            <h1 className={"mb-2"}>{project.title}</h1>
-            <p className="text-xl mt-0">{project.description}</p>
-            <hr className="my-4" />
+        <article className={"prose prose-invert prose-emerald max-w-6xl p-5 md:p-10 prose-img:rounded px-0"}>
+            <h1>{project.title}</h1>
+            <p>Published {moment(project.publishedAt).calendar()}</p>
             <MDX code={project.body.code} />
         </article>
     );

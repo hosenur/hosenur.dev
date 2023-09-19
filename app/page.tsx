@@ -6,7 +6,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='flex flex-col gap-20'>
+    <div className='flex flex-col gap-10'>
       <Hero />
       <RecentProjects/>
       <RecentBlogs />
