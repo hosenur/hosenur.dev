@@ -1,6 +1,15 @@
-import React from 'react'
+import React from 'react';
 import Marquee from "react-fast-marquee";
-const map = {
+
+// Define types for the technology map
+type TechnologyMap = {
+  [key: string]: {
+    image: string;
+    classes: string;
+  };
+};
+
+const map: TechnologyMap = {
   expo: {
     image: "https://ik.imagekit.io/kydj5j026nb/hosenurdev/logo-wordmark-light_uKSYrlDUX.png?updatedAt=1695162182991",
     classes: "h-5 w-auto mx-5"
@@ -21,28 +30,29 @@ const map = {
     image: "https://ik.imagekit.io/kydj5j026nb/hosenurdev/CF_logo_horizontal_whitetype_SAnJV9hPZ.png?updatedAt=1695162999916",
     classes: "h-5 w-auto mx-5"
   }
+};
 
-}
-//stack is an array of strings
+// Define the prop type for Stack component
 type StackProps = {
-  stack: string[]
-}
+  stack: Array<keyof TechnologyMap>; // Use keyof to ensure only valid keys are passed
+};
+
 export default function Stack({ stack }: StackProps) {
   return (
     <Marquee
       gradient
       gradientColor={[23, 23, 23]}
       gradientWidth={300}
-      autoFill speed={30}>
+      autoFill
+      speed={30}
+    >
       {stack?.map((tech, i) => (
-
         <img
           key={i}
           src={map[tech].image}
           className={map[tech].classes}
         />
-
       ))}
     </Marquee>
-  )
+  );
 }
