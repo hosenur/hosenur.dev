@@ -3,6 +3,7 @@ import { allProjects } from "contentlayer/generated";
 import { Metadata } from "next";
 import { MDX } from "@/components/MDXComponents";
 import moment from "moment";
+import Image from "next/image";
 interface ProjectProps {
     params: {
         slug: string[];
@@ -61,9 +62,10 @@ export default async function ProjectPage({ params }: ProjectProps) {
     }
 
     return (
-        <article className={"prose prose-invert prose-emerald max-w-6xl p-5 md:p-10 prose-img:rounded px-0"}>
+        <article className={"prose prose-invert prose-emerald max-w-6xl prose-img:rounded" }>
             <h1>{project.title}</h1>
             <p>Published {moment(project.publishedAt).calendar()}</p>
+            <Image src={project.banner} alt="banner" width={1920} height={1440} className="rounded w-full max-w-full" />
             <MDX code={project.body.code} />
         </article>
     );
