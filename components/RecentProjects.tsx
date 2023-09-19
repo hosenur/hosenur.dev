@@ -1,19 +1,25 @@
-import { allBlogs, Blog } from '@/.contentlayer/generated'
-import { medium, regular } from '@/utils/fonts'
-import React from 'react'
-
+import { allProjects } from "@/.contentlayer/generated";
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 export default function RecentProjects() {
     return (
-        <div className='flex flex-col gap-2.5'>
-            {allBlogs.map((blog: Blog) => {
-                return (
-                    <div key={blog._id}>
-                        <h2 className={'text-lg ' + medium.className}>{blog.title}</h2>
-                        <p className={'text-zinc-500 ' + regular.className}>{blog.description}</p>
-                    </div>
-                )
-            }
-            )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 group z-0">
+            {allProjects.slice(0, 4).map((project) => (
+                <Link
+                    href={project.slug}
+                    className="flex flex-col gap-2"
+                    key={project._id}
+                >
+                    <Image
+                        src={project.banner}
+                        alt="banner"
+                        width={1920}
+                        height={1440}
+                        className="group-hover:opacity-40 transition-opacity duration-300 hover:!opacity-100 rounded"
+                    />
+                </Link>
+            ))}
         </div>
-    )
+    );
 }

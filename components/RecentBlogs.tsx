@@ -3,7 +3,6 @@ import { medium, regular } from '@/utils/fonts'
 import React from 'react'
 
 export default function RecentBlogs() {
-    console.log(allBlogs)
     return (
         <div className='flex flex-col gap-2.5'>
             {allBlogs.map((blog: Blog) => {
