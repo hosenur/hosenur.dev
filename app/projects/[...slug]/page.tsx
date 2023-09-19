@@ -62,7 +62,7 @@ export default async function ProjectPage({ params }: ProjectProps) {
 
     return (
         <article className={"py-5 prose prose-invert prose-emerald max-w-4xl px-0"}>
-            <h1 className="mb-2">{project.title}</h1>
+            <h1 className={"mb-2"}>{project.title}</h1>
             <p className="text-xl mt-0">{project.description}</p>
             <hr className="my-4" />
             <MDX code={project.body.code} />

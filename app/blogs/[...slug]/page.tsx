@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Blog, allBlogs } from "contentlayer/generated";
 import { Metadata } from "next";
 import { MDX } from "@/components/MDXComponents";
-
+import moment from "moment"
 interface BlogProps {
     params: {
         slug: string[];
@@ -59,10 +59,9 @@ export default async function ProjectPage({ params }: BlogProps) {
     }
 
     return (
-        <article className={"py-5 prose prose-invert prose-emerald max-w-4xl px-0"}>
-            <h1 className="mb-2">{blog.title}</h1>
-            <p className="text-xl mt-0">{blog.description}</p>
-            <hr className="my-4" />
+        <article className={"prose prose-invert prose-emerald max-w-6xl p-10 prose-img:rounded"}>
+            <h1>{blog.title}</h1>
+            <p>Published {moment(blog.publishedAt).calendar()}</p>
             <MDX code={blog.body.code} />
         </article>
     );
