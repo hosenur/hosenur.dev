@@ -28,7 +28,7 @@ export const Blog = defineDocumentType(() => ({
       type: "string",
     },
     publishedAt: {
-      type: "date", 
+      type: "date",
       required: true,
     },
   },
