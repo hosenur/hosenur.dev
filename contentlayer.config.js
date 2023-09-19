@@ -31,10 +31,6 @@ export const Blog = defineDocumentType(() => ({
       type: "date", 
       required: true,
     },
-    banner: {
-      type: "string",
-      required: true,
-    }
   },
   computedFields,
 }));

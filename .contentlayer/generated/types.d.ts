@@ -16,7 +16,6 @@ export type Blog = {
   title: string
   description?: string | undefined
   publishedAt: IsoDateTimeString
-  banner: string
   /** MDX file body */
   body: MDX
   slug: string

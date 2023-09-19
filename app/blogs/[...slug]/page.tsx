@@ -1,71 +1,69 @@
 import { notFound } from "next/navigation";
-import { allProjects } from "contentlayer/generated";
+import { Blog, allBlogs } from "contentlayer/generated";
 import { Metadata } from "next";
 import { MDX } from "@/components/MDXComponents";
 
-interface ProjectProps {
-  params: {
-    slug: string[];
-  };
+interface BlogProps {
+    params: {
+        slug: string[];
+    };
 }
 
-async function getProjectFromParams(params: ProjectProps["params"]) {
-  const slug = params?.slug?.join("/");
-  const project = allProjects.find((project) => project.slugAsParams === slug);
+async function getBlogFromParams(params: BlogProps["params"]) {
+    const slug = params?.slug?.join("/");
+    const blog = allBlogs.find((blog) => blog.slugAsParams === slug);
 
-  if (!project) {
-    null;
-  }
+    if (!blog) {
+        null;
+    }
 
-  return project;
+    return blog;
 }
 
 export async function generateMetadata({
-  params,
-}: ProjectProps): Promise<Metadata> {
-  const project = await getProjectFromParams(params);
+    params,
+}: BlogProps): Promise<Metadata> {
+    const blog = await getBlogFromParams(params);
 
-  if (!project) {
-    return {};
-  }
+    if (!blog) {
+        return {};
+    }
 
-  return {
-    title: project.title,
-    description: project.description,
-    openGraph: {
-      title: project.title,
-      description: project.description,
-      images: [project.banner],
-    },
-    twitter: {
-      title: project.title,
-      description: project.description,
-      images: [project.banner],
-    },
-  };
+    return {
+        title: blog.title,
+        description: blog.description,
+        openGraph: {
+            title: blog.title,
+            description: blog.description,
+        },
+        twitter: {
+            title: blog.title,
+            description: blog.description,
+        },
+    };
 }
 
 export async function generateStaticParams(): Promise<
-  ProjectProps["params"][]
+    BlogProps["params"][]
 > {
-  return allProjects.map((project) => ({
-    slug: project.slugAsParams.split("/"),
-  }));
+    return allBlogs.map((blog) => ({
+        slug: blog.slugAsParams.split("/"),
+    }));
 }
 
-export default async function ProjectPage({ params }: ProjectProps) {
-  const project = await getProjectFromParams(params);
+export default async function ProjectPage({ params }: BlogProps) {
+    const blog = await getBlogFromParams(params);
 
-  if (!project) {
-    notFound();
-  }
+    if (!blog) {
+        notFound();
+    }
 
-  return (
-    <article className={"py-5 prose prose-invert prose-emerald max-w-4xl px-0"}>
-      <h1 className="mb-2">{project.title}</h1>
-      <p className="text-xl mt-0">{project.description}</p>
-      <hr className="my-4" />
-      <MDX code={project.body.code} />
-    </article>
-  );
+    return (
+        <article className={"py-5 prose prose-invert prose-emerald max-w-4xl px-0"}>
+            <h1 className="mb-2">{blog.title}</h1>
+            <p className="text-xl mt-0">{blog.description}</p>
+            <hr className="my-4" />
+            <MDX code={blog.body.code} />
+        </article>
+    );
 }
