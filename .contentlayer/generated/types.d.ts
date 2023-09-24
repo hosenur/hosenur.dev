@@ -30,6 +30,7 @@ export type Project = {
   type: 'Project'
   title: string
   description?: string | undefined
+  draft: boolean
   reposiroty?: string | undefined
   url?: string | undefined
   banner: string

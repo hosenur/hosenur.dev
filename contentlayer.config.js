@@ -51,6 +51,10 @@ export const Project = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    draft: {
+      type: "boolean",
+      required: true,
+    },
     reposiroty: {
       type: "string",
     },
