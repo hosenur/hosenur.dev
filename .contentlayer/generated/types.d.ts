@@ -15,6 +15,7 @@ export type Blog = {
   type: 'Blog'
   title: string
   description?: string | undefined
+  draft: boolean
   publishedAt: IsoDateTimeString
   /** MDX file body */
   body: MDX

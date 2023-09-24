@@ -27,6 +27,10 @@ export const Blog = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    draft: {
+      type: "boolean",
+      required: true,
+    },
     publishedAt: {
       type: "date",
       required: true,

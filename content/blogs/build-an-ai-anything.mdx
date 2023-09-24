@@ -1,0 +1,43 @@
+---
+title: Build an AI Anyting 
+publishedAt: 2023-09-24 07:59:00
+description : Use open source machine learning model to build your own SaaS product.
+draft: false
+---
+It's 2023, you open twitter get overwhelmed by the number of people building AI-[What Not], you open YouTube and then get a frenzy of Best AI Projects of this week videos. You also see screenshots of developer's billing dashboard where they show off their $100K income from the AI Side project they created. Multiple pretty cool projects emerged, AI Voice cloner, AI Logo Designer, AI Room Designer, AI Face Cloner, AI Chatbots, AI Code completion and AI what not !!!.
+
+But there was one issue with all of the projects, as AI and ML being a resource intensive taks all of the services were based on a freemium model, where you could get 3 or 5 generations ,then you had to buy credits to get more generations. Very popular services like [NightCafe](https://creator.nightcafe.studio/), [Midjourney](https://www.midjourney.com/) and a lot more used this model, and to be worse some services didn't even provide a free tier. I don't wanna may a dollar for generating icons for 7 projects I create in a week hoping to complete one day and get 5 stars on GitHub, so I thought lets solve this problem and create a project out of it (Pretty Clever and I know it, Thank you)
+
+To accomplish this we are gonna use [Replicate](https://replicate.com/). Replicate lets you run machine learning models with a few lines of code, without needing to understand how machine learning works. Of course it is a paid serive, but you only pay for what you use and you can use anything. Replicate provdies ML Models of almost everything you could ever need like Voice Cloning, Chat completion, Image generation, Logo generation, Code Coompletion and [much more](https://replicate.com/explore)
+
+Using any Replicate model is very very straight forward, set up your billing, use the SDK of your choce, here is the universal syntax of running a model in NodeJS
+
+First install the required packages and then set the ENV variables.
+
+```bash
+npm install replicate
+echo REPLICATE_API_TOKEN=r8_ofcthisisnotarealapikey > .env
+```
+```js
+import Replicate from "replicate";
+
+const replicate = new Replicate({
+  auth: process.env.REPLICATE_API_TOKEN,
+});
+
+const model = "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf";
+const input = { prompt: "an astronaut riding a horse on mars, hd, dramatic lighting, detailed" };
+const output = await replicate.run(model, { input });
+
+console.log(output);
+```
+The above snippet outputs something like this
+![Astro boi](https://pbxt.replicate.delivery/E6Ftpfi0dF1SOi4b6ltUwsfdxUf7zTQSfdhmJfRcfGTdZ88UE/out-0.png)
+
+You are free to play around with the models, and your creativity becomes the limit on what model to use and how to use it, here are some of the highest run models along with the use case
+- [stability-ai/sdxl](https://replicate.com/stability-ai/sdxl) : Stable Diffusion, Text to Image.
+- [meta/llama-2-70b-chat](https://replicate.com/meta/llama-2-70b-chat) : Meta's (Facebook) chat completion model, ofc they spied your Messenger & WhatsApp.
+- [meta/codellama-13b](https://replicate.com/meta/codellama-13b) : Meta's (Fcaebook) code completion model.
+- [nightmareai/real-esrgan](https://replicate.com/nightmareai/real-esrgan) : Upscale images.
+
+I hope you got the AI part of the blog, now the anything part is upto you.

@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: BlogProps) {
     return (
         <article className={"prose prose-invert prose-emerald max-w-6xl prose-img:rounded"}>
             <h1>{blog.title}</h1>
-            <p>Published {moment(blog.publishedAt).calendar()}</p>
+            <p>Hosenur published this article {moment(blog.publishedAt).calendar()}</p>
             <MDX code={blog.body.code} />
         </article>
     );

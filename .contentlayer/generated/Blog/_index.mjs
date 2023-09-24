@@ -2,5 +2,6 @@
 
 import blogs__buildstackMdx from './blogs__buildstack.mdx.json' assert { type: 'json' }
 import blogs__workspaceMdx from './blogs__workspace.mdx.json' assert { type: 'json' }
+import blogs__buildAnAiAnythingMdx from './blogs__build-an-ai-anything.mdx.json' assert { type: 'json' }
 
-export const allBlogs = [blogs__buildstackMdx, blogs__workspaceMdx]
+export const allBlogs = [blogs__buildstackMdx, blogs__workspaceMdx, blogs__buildAnAiAnythingMdx]
