@@ -41,7 +41,11 @@ const map: TechnologyMap = {
   appwrite:{
     image:"https://ik.imagekit.io/kydj5j026nb/hosenurdev/built-with-appwrite_GI9uyFpPe.svg?updatedAt=1695235641136",
     classes : "h-8 w-auto mx-5"
-  }
+  },
+  nuxt:{
+    image:"https://ik.imagekit.io/kydj5j026nb/hosenurdev/full-logo-white_KCqmEhsygq.png?updatedAt=1695588466362",
+    classes : "h-5 w-auto mx-5"
+  },
 };
 
 // Define the prop type for Stack component

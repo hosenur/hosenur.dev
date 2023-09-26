@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function RecentProjects() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 group z-0">
-            {allProjects.slice(0, 4).map((project) => (
+            {allProjects.filter((project) => !project.draft).slice(0, 4).map((project) => (
                 <Link
                     href={project.slug}
                     className="flex flex-col gap-2"
