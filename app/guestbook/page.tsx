@@ -14,7 +14,7 @@ async function getSignatures() {
 async function create(formData: FormData) {
     'use server'
     await addDoc(collection(db, "signatures"), {
-        name : "Hosenur",
+        name: "Hosenur",
         message: "Text"
     })
 
@@ -31,7 +31,7 @@ export default async function GuestBook() {
             </form>
             {signatures.map((signature: any) => {
                 return (
-                    <div className='mb-2.5 pb-2.5 border-b border-zinc-800'>
+                    <div key={signature.created} className='mb-2.5 pb-2.5 border-b border-zinc-800'>
                         <p>{signature.text}</p>
                         <p className='text-zinc-500 text-sm'>By {signature.name} {moment(signature.created).fromNow()}</p>
                     </div>
