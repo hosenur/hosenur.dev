@@ -57,7 +57,7 @@ export default function Stack({ stack }: StackProps) {
   return (
     <Marquee
       gradient
-      gradientColor={[23, 23, 23]}
+      gradientColor={"#18181b"}
       gradientWidth={300}
       autoFill
       speed={30}
