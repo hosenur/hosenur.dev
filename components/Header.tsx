@@ -25,6 +25,10 @@ const navLinks: INavLink[] = [
         text: 'Blogs'
     },
     {
+        href: '/stack',
+        text: 'Stack'
+    },
+    {
         href: '/guestbook',
         text: 'Guest Book'
     },
