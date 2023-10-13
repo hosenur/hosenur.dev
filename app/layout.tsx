@@ -3,6 +3,7 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next'
 import { ServerThemeProvider } from '@wits/next-themes'
+import { ClerkProvider } from '@clerk/nextjs'
 
 
 export const metadata: Metadata = {
@@ -16,15 +17,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ServerThemeProvider attribute='class' defaultTheme='dark'>
+    <ClerkProvider>
 
-      <html lang="en">
-        <body className={"max-w-6xl mx-auto p-5 lg:p-10 bg-zinc-900 text-zinc-100"}>
-          <Header />
-          {children}
-          <Analytics />
-        </body>
-      </html>
-    </ServerThemeProvider>
+      <ServerThemeProvider attribute='class' defaultTheme='dark'>
+
+
+        <html lang="en">
+          <body className={"max-w-6xl mx-auto p-5 lg:p-10 bg-zinc-900 text-zinc-100"}>
+            <Header />
+            {children}
+            <Analytics />
+          </body>
+        </html>
+      </ServerThemeProvider>
+    </ClerkProvider>
   )
 }
