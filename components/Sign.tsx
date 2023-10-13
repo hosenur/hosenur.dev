@@ -12,10 +12,8 @@ export default function Sign() {
         <div>
             {
                 !isSignedIn ?
-                    <div className='flex items-center justify-center gap-5'>
+                    <div className='flex items-center justify-center mb-5'>
                         <Link href={"/auth"} type='submit' className='bg-white text-zinc-900 py-2.5 rounded-md px-10'>Authenticate to Sign</Link>
-
-
                     </div> :
 
                     <div className='flex  items-center mb-5 gap-2.5'>
