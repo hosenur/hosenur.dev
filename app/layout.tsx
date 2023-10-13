@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next'
 import { ServerThemeProvider } from '@wits/next-themes'
 import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes';
 
 
 export const metadata: Metadata = {
@@ -17,7 +18,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={{
+      baseTheme: dark
+    }}>
 
       <ServerThemeProvider attribute='class' defaultTheme='dark'>
 

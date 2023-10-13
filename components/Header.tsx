@@ -36,6 +36,7 @@ const navLinks: INavLink[] = [
 
 export default function Header() {
     const pathname = usePathname();
+    if(pathname === '/auth') return null;
     return (
         <header className='text-white mb-5 pb-5 flex gap-10 border-b border-zinc-800'>
             <nav className={'flex gap-5 md:gap-10 ' + regular.className}>
