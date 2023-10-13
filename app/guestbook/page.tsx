@@ -12,11 +12,8 @@ async function getSignatures() {
     return signatures;
 }
 async function create(formData: FormData) {
-    'use server'
-    await addDoc(collection(db, "signatures"), {
-        name: "Hosenur",
-        message: "Text"
-    })
+    "use server";
+    console.log(formData.get('message'));
 
     // mutate data
     // revalidate cache
@@ -26,7 +23,11 @@ export default async function GuestBook() {
     return (
         <div>
             <form action={create} className='flex  items-center mb-5 gap-2.5'>
-                <input type="text" className='w-full bg-zinc-700 p-2.5 text-zinc-100 rounded-md focus:outline-none' placeholder='Write Something Here' name="" id="" />
+                <input
+                    name='message'
+                    type="text"
+                    className='w-full bg-zinc-900 border border-zinc-700 p-2.5 text-zinc-100 rounded-md focus:outline-none'
+                    placeholder='Write anything here suggestions, message, humor or a shout out' id="" />
                 <button type='submit' className='bg-white text-zinc-900 py-2.5 rounded-md px-10'>Submit</button>
             </form>
             {signatures.map((signature: any) => {

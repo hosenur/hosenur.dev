@@ -2,9 +2,9 @@
 
 import projects__blazeMdx from './projects__blaze.mdx.json' assert { type: 'json' }
 import projects__cosmoMdx from './projects__cosmo.mdx.json' assert { type: 'json' }
+import projects__devstatsMdx from './projects__devstats.mdx.json' assert { type: 'json' }
 import projects__lightboxMdx from './projects__lightbox.mdx.json' assert { type: 'json' }
 import projects__orbitMdx from './projects__orbit.mdx.json' assert { type: 'json' }
 import projects__squareMdx from './projects__square.mdx.json' assert { type: 'json' }
-import projects__devstatsMdx from './projects__devstats.mdx.json' assert { type: 'json' }
 
-export const allProjects = [projects__blazeMdx, projects__cosmoMdx, projects__lightboxMdx, projects__orbitMdx, projects__squareMdx, projects__devstatsMdx]
+export const allProjects = [projects__blazeMdx, projects__cosmoMdx, projects__devstatsMdx, projects__lightboxMdx, projects__orbitMdx, projects__squareMdx]
