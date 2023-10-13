@@ -1,8 +1,8 @@
 "use client";
 import React from 'react'
 import { useUser } from "@clerk/nextjs";
+import Link from 'next/link';
 
-import { UserButton, SignInWithMetamaskButton,SignInButton } from "@clerk/nextjs";
 
 export default function Sign() {
     const { isLoaded, isSignedIn, user } = useUser();
@@ -13,7 +13,8 @@ export default function Sign() {
             {
                 !isSignedIn ?
                     <div className='flex items-center justify-center gap-5'>
-                        <SignInButton/>
+                        <Link href={"/auth"} type='submit' className='bg-white text-zinc-900 py-2.5 rounded-md px-10'>Authenticate to Sign</Link>
+
 
                     </div> :
 
