@@ -1,10 +1,12 @@
 import Image from "next/image"
 import ProjectInfo from "./ProjectInfo"
 import { useMDXComponent } from "next-contentlayer/hooks"
+import Heading from "./Heading"
 
 const components = {
   Image,
-  ProjectInfo
+  ProjectInfo,
+  Heading
 }
 
 interface MdxProps {

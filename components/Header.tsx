@@ -4,6 +4,7 @@ import { regular } from '@/utils/fonts';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 import React from 'react'
+import { RoughNotation } from 'react-rough-notation';
 
 
 type INavLink = {
@@ -36,16 +37,20 @@ const navLinks: INavLink[] = [
 
 export default function Header() {
     const pathname = usePathname();
-    if(pathname === '/auth') return null;
+    if (pathname === '/auth') return null;
     return (
-        <header className='text-white mb-5 pb-5 flex gap-10 border-b border-zinc-800'>
+        <header className='text-white mb-5 pb-5 lg:pb-10 flex gap-10 border-b border-zinc-800'>
             <nav className={'flex  justify-between md:justify-start gap-5 w-full ' + regular.className}>
                 {navLinks.map((navLink, index) => (
-                    <Link href={navLink.href} key={index}
-                        className={`text-sm md:text-base ${pathname !== navLink.href ? 'text-zinc-500' : 'text-zinc-100'}`}
+                    <RoughNotation key={index} type='highlight' color='#52525b'  show={pathname === navLink.href} strokeWidth={1} 
                     >
-                        {navLink.text}
-                    </Link>
+
+                        <Link href={navLink.href}
+                            className={`text-sm md:text-base ${pathname !== navLink.href ? 'text-zinc-500' : 'text-zinc-100'}`}
+                        >
+                            {navLink.text}
+                        </Link>
+                    </RoughNotation>
                 ))}
             </nav>
         </header>
