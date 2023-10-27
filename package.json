@@ -11,6 +11,7 @@
   "dependencies": {
     "@clerk/nextjs": "^4.25.4",
     "@clerk/themes": "^1.7.7",
+    "@icons-pack/react-simple-icons": "^9.1.0",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "20.6.2",
     "@types/react": "18.2.22",
@@ -27,6 +28,7 @@
     "next": "13.4.19",
     "next-contentlayer": "^0.3.4",
     "postcss": "8.4.30",
+    "prism-react-renderer": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-fast-marquee": "^1.6.0",

@@ -26,7 +26,7 @@ export default function RootLayout({
 
 
         <html lang="en">
-          <body className={"max-w-6xl mx-auto p-5 lg:p-10 bg-zinc-900 text-zinc-100"}>
+          <body className={"max-w-6xl mx-auto p-5 lg:p-10 bg-zinc-950 text-zinc-100"}>
             <Header />
             {children}
             <Analytics />
