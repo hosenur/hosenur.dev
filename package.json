@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.25.4",
+    "@clerk/nextjs": "^4.26.1",
     "@clerk/themes": "^1.7.7",
     "@icons-pack/react-simple-icons": "^9.1.0",
     "@tailwindcss/typography": "^0.5.10",

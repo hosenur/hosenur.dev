@@ -29,12 +29,22 @@ export async function generateMetadata({
         return {};
     }
 
+    const ogImage = "https://hosenur.dev/og?title=" + blog.title;
+
     return {
         title: blog.title,
         description: blog.description,
         openGraph: {
             title: blog.title,
             description: blog.description,
+            type: "article",
+            publishedTime: blog.publishedAt,
+            url: `https://hosenur.com/blog/${blog.slug}`,
+            images: [
+                {
+                    url: ogImage,
+                }
+            ]
         },
         twitter: {
             title: blog.title,
