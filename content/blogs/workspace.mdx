@@ -2,7 +2,7 @@
 title: Crafting my Workspace
 publishedAt:  2023-09-19 06:00:00
 description : Creating a workspace for my daily driver, ricing up my distro and configuring apps
-draft: true
+draft: false
 ---
 We all have been there, setting up a new machine, and installing all the tools we need to get our work done. I have been using a MSI Modern 15 Notebook as my daily driver and recently got Fedora installed in it. I have been using Windows before due to some hardware compatibility issues, but now they were fixed and having a Linux distro installed I did what every Linux Enthusiast would do - Rice it up.
 ![Rice](https://ik.imagekit.io/kydj5j026nb/hosenurdev/Screenshot%20from%202023-09-19%2007-01-43_GtNGhCiSD.png?updatedAt=1695087160573)
@@ -12,3 +12,29 @@ Here is a list of all the stuffs I install .
 - Wez Term
 - Neovim
 - Gruvbox Theming all over the Distro and apps
+
+<Snippet 
+language="bash"
+fileName="~/.zshrc"
+codeBlock={`
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="diamond"
+plugins=(git web-search zsh-autosuggestions zsh-syntax-highlighting zoxide vscode)
+source $ZSH/oh-my-zsh.sh
+`}
+ />
+
+<Snippet 
+language="lua"
+fileName="~/.config/wezterm/wezterm.lua"
+codeBlock={`
+return {
+    color_scheme = "Catppuccin Mocha", -- or Macchiato, Frappe, Latte
+    tab_bar_at_bottom = true,
+    use_fancy_tab_bar = false,
+    initial_cols=200,
+    initial_rows=200,
+    window_decorations = "RESIZE"
+}
+`}
+ />
