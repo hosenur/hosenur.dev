@@ -21,17 +21,16 @@ export async function GET(req: NextRequest) {
                     flexDirection: 'column',
                     alignItems: 'flex-start',
                     justifyContent: 'center',
-                    backgroundImage: 'url(https://products.ls.graphics/mesh-gradients/images/61.-Lavender.jpg)',
+                    // backgroundImage: 'url(https://products.ls.graphics/mesh-gradients/images/61.-Lavender.jpg)',
+                    backgroundImage : "url(http://hosenur.dev/assets/bg.png)",
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
 
                 }}
             >
                 <div
                     style={{
-                        marginLeft: 190,
-                        marginRight: 190,
+                        marginLeft: 150,
+                        marginRight: 150,
                         display: 'flex',
                         fontSize: 130,
                         fontFamily: 'Thunder',
