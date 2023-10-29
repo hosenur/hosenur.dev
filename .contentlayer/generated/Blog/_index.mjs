@@ -2,7 +2,8 @@
 
 import blogs__approachToReactProjectMdx from './blogs__approach-to-react-project.mdx.json' assert { type: 'json' }
 import blogs__buildAnAiAnythingMdx from './blogs__build-an-ai-anything.mdx.json' assert { type: 'json' }
+import blogs__buildingThisSiteMdx from './blogs__building-this-site.mdx.json' assert { type: 'json' }
 import blogs__buildstackMdx from './blogs__buildstack.mdx.json' assert { type: 'json' }
 import blogs__workspaceMdx from './blogs__workspace.mdx.json' assert { type: 'json' }
 
-export const allBlogs = [blogs__approachToReactProjectMdx, blogs__buildAnAiAnythingMdx, blogs__buildstackMdx, blogs__workspaceMdx]
+export const allBlogs = [blogs__approachToReactProjectMdx, blogs__buildAnAiAnythingMdx, blogs__buildingThisSiteMdx, blogs__buildstackMdx, blogs__workspaceMdx]
