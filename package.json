@@ -25,7 +25,7 @@
     "firebase": "^10.4.0",
     "lucide-react": "^0.279.0",
     "moment": "^2.29.4",
-    "next": "13.4.19",
+    "next": "^14.0.0",
     "next-contentlayer": "^0.3.4",
     "postcss": "8.4.30",
     "prism-react-renderer": "^2.1.0",
