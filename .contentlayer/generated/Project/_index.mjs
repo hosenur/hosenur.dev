@@ -7,5 +7,6 @@ import projects__lightboxMdx from './projects__lightbox.mdx.json' assert { type:
 import projects__orbitMdx from './projects__orbit.mdx.json' assert { type: 'json' }
 import projects__squareMdx from './projects__square.mdx.json' assert { type: 'json' }
 import projects__zenMdx from './projects__zen.mdx.json' assert { type: 'json' }
+import projects__edgyMdx from './projects__edgy.mdx.json' assert { type: 'json' }
 
-export const allProjects = [projects__blazeMdx, projects__cosmoMdx, projects__devstatsMdx, projects__lightboxMdx, projects__orbitMdx, projects__squareMdx, projects__zenMdx]
+export const allProjects = [projects__blazeMdx, projects__cosmoMdx, projects__devstatsMdx, projects__lightboxMdx, projects__orbitMdx, projects__squareMdx, projects__zenMdx, projects__edgyMdx]
