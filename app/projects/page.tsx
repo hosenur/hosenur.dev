@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <div className={"flex flex-col gap-10 "+regular.className}>
-      <h1 className={black.className+" text-4xl md:text-5xl"}>Stuffs I Built</h1>
+      <h1 className={black.className+" text-4xl md:text-5xl"}>Stuffs I Have Built</h1>
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 group z-0">
       {allProjects.filter((project) => !project.draft).map((project) => (
