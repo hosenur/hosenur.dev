@@ -1,4 +1,5 @@
 import { allProjects } from "@/.contentlayer/generated";
+import { regular,black } from "@/utils/fonts";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,12 +10,15 @@ export const metadata: Metadata = {
 }
 export default function Projects() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 group z-0">
+    <div className={"flex flex-col gap-10 "+regular.className}>
+      <h1 className={black.className+" text-4xl md:text-5xl"}>Stuffs I Built</h1>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 group z-0">
       {allProjects.filter((project) => !project.draft).map((project) => (
         <Link
-          href={project.slug}
-          className="flex flex-col gap-2"
-          key={project._id}
+        href={project.slug}
+        className="flex flex-col gap-2"
+        key={project._id}
         >
           <Image
             src={project.banner}
@@ -22,11 +26,16 @@ export default function Projects() {
             width={1920}
             height={1440}
             className="group-hover:opacity-40 transition-opacity duration-300 hover:!opacity-100 rounded"
-          />
+            />
+            <div className="flex justify-between">
+
           <h1>{project.title}</h1>
-          <p>{project.description}</p>
+          <p className="text-zinc-500">{project.category}</p>
+            </div>
+          <p className="text-zinc-500">{project.description}</p>
         </Link>
       ))}
     </div>
+      </div>
   )
 }
