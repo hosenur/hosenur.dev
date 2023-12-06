@@ -27,6 +27,7 @@
     "moment": "^2.29.4",
     "next": "^14.0.0",
     "next-contentlayer": "^0.3.4",
+    "nextjs-toploader": "^1.6.4",
     "postcss": "8.4.30",
     "prism-react-renderer": "^2.1.0",
     "prismjs": "^1.29.0",

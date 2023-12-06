@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { ServerThemeProvider } from '@wits/next-themes'
 import { ClerkProvider } from '@clerk/nextjs'
 import { dark } from '@clerk/themes';
+import NextTopLoader from 'nextjs-toploader';
 
 
 export default function RootLayout({
@@ -22,6 +23,9 @@ export default function RootLayout({
 
         <html lang="en">
           <body className={"max-w-6xl mx-auto p-5 lg:p-10 bg-zinc-950 text-zinc-100"}>
+            <NextTopLoader
+            color='#fff'
+            />
             <Header />
             {children}
             <Analytics />
