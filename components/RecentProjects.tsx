@@ -2,6 +2,7 @@ import { allProjects } from "@/.contentlayer/generated";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { medium } from "@/utils/fonts";
 export default function RecentProjects() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 group z-0">
@@ -18,6 +19,12 @@ export default function RecentProjects() {
                         height={1440}
                         className="group-hover:opacity-40 transition-opacity duration-300 hover:!opacity-100 rounded"
                     />
+                    <div className="flex justify-between text-lg">
+
+                        <h1 className={medium.className}>{project.title}</h1>
+                        <p className="text-zinc-500">{project.category}</p>
+                    </div>
+                    <p className="text-zinc-500">{project.description}</p>
                 </Link>
             ))}
         </div>
