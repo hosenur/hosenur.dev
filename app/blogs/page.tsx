@@ -1,3 +1,5 @@
+import { allBlogs } from '@/.contentlayer/generated'
+import Blog from '@/components/Blog'
 import { Metadata } from 'next'
 import React from 'react'
 export const metadata: Metadata = {
@@ -6,6 +8,12 @@ export const metadata: Metadata = {
 }
 export default function Blogs() {
   return (
-    <div>Blogs</div>
-  )
+    <div className='flex flex-col gap-2.5'>
+      {allBlogs.filter((blog) => !blog.draft).map((blog) => {
+        return (
+          <Blog key={blog._id} blog={blog} />
+        )
+      }
+      )}
+    </div>)
 }

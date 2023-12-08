@@ -7,9 +7,35 @@ export const metadata: Metadata = {
 }
 export default function Stack() {
   return (
-    <div className={'flex flex-col gap-10 '+regular.className }>
+    <div className={'flex flex-col gap-10 ' + regular.className}>
       <p>The following is my on the go app stack for organising my life, coding and all</p>
-      <div className='flex flex-wrap gap-5'>
+      <h1>DEVICES & SPECS</h1>
+      <div>
+        <div className='flex items-center gap-5'>
+          <div>
+
+          <img src="/assets/msi.png" className='w-14' alt="" />
+          </div>
+          <p>MSI Modern 15 A5M 1.5 TB SSD + 32 GB DDR4</p>
+        </div>
+        <div className='flex items-center gap-5'>
+          <div>
+
+          <img src="/assets/samsung.png" className='w-14' alt="" />
+          </div>
+          <p>Samsung Galaxy A22 4G 128 GB</p>
+        </div>
+        <div className='flex items-center gap-5'>
+          <div className='w-14'>
+
+          <img src="/assets/apple.png" className='w-6' alt="" />
+          </div>
+          <p>Samsung Galaxy A22 4G 128 GB</p>
+        </div>
+      </div>
+
+
+      {/* <div className='flex flex-wrap gap-5'>
         <img src="/assets/obsidian.svg" className='w-10' alt="" />
         <img src="/assets/brave.svg" className='w-10' alt="" />
         <img src="/assets/wez.svg" className='w-10' alt="" />
@@ -20,7 +46,7 @@ export default function Stack() {
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" className='w-10' alt="" />
         <img src="/assets/insomnia.svg" className='w-10' alt="" />
 
-      </div>
+      </div> */}
     </div>
   )
 }
