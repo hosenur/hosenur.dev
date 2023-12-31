@@ -7,32 +7,10 @@ export const metadata: Metadata = {
 }
 export default function Stack() {
   return (
-    <div className={'flex flex-col gap-10 ' + regular.className}>
-      <p>The following is my on the go app stack for organising my life, coding and all</p>
-      <h1>DEVICES & SPECS</h1>
-      <div>
-        <div className='flex items-center gap-5'>
-          <div>
-
-          <img src="/assets/msi.png" className='w-14' alt="" />
-          </div>
-          <p>MSI Modern 15 A5M 1.5 TB SSD + 32 GB DDR4</p>
-        </div>
-        <div className='flex items-center gap-5'>
-          <div>
-
-          <img src="/assets/samsung.png" className='w-14' alt="" />
-          </div>
-          <p>Samsung Galaxy A22 4G 128 GB</p>
-        </div>
-        <div className='flex items-center gap-5'>
-          <div className='w-14'>
-
-          <img src="/assets/apple.png" className='w-6' alt="" />
-          </div>
-          <p>Samsung Galaxy A22 4G 128 GB</p>
-        </div>
-      </div>
+    <div className={regular.className}>
+      <p>MSI Modern A15M 2 TB SSD + 32 GB DDR4</p>
+      <p>Apple iPhone 15 Plus 256 GB</p>
+      <p>Samsung Galsxy A22 4G 128 GB</p>
 
 
       {/* <div className='flex flex-wrap gap-5'>

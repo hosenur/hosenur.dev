@@ -7,7 +7,7 @@ import Project from "./Project";
 export default function RecentProjects() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 group z-0">
-            {allProjects.filter((project) => !project.draft).slice(0, 4).map((project) => (
+            {allProjects.filter((project) => !project.draft).slice(0, 6).map((project) => (
                 <Project key={project._id}
                     project={project} />
             ))}
