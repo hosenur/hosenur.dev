@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className='flex flex-col p-5 max-w-4xl mx-auto'>
       <main className='flex flex-col gap-10'>
-        <Hero/>
+        {/* <Hero/> */}
         <RecentBlogs/>  
       </main>
     </div>
