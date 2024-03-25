@@ -1,106 +1,102 @@
+// contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeCodeTitles from "rehype-code-titles";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
-
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+var computedFields = {
   slug: {
     type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
+    resolve: (doc) => `/${doc._raw.flattenedPath}`
   },
   slugAsParams: {
     type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-  },
+    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/")
+  }
 };
-
-export const Blog = defineDocumentType(() => ({
+var Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: `blogs/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     description: {
-      type: "string",
+      type: "string"
     },
     publishedAt: {
       type: "date",
-      required: true,
-    },
+      required: true
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-export const Project = defineDocumentType(() => ({
+var Project = defineDocumentType(() => ({
   name: "Project",
   filePathPattern: `projects/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     description: {
-      type: "string",
+      type: "string"
     },
     draft: {
       type: "boolean",
-      required: true,
+      required: true
     },
     reposiroty: {
-      type: "string",
+      type: "string"
     },
     url: {
-      type: "string",
+      type: "string"
     },
     banner: {
       type: "string",
-      required: true,
+      required: true
     },
     category: {
       type: "string",
-      required: true,
+      required: true
     },
     publishedAt: {
       type: "date",
-      required: true,
+      required: true
     }
   },
-  computedFields,
+  computedFields
 }));
-export const Snippet = defineDocumentType(() => ({
+var Snippet = defineDocumentType(() => ({
   name: "Snippet",
   filePathPattern: `snippets/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
       type: "string",
-      required: true,
+      required: true
     },
     description: {
       type: "string",
-      required: true,
+      required: true
     },
     banner: {
       type: "string",
-      required: true,
+      required: true
     },
     language: {
-      type: "string",
+      type: "string"
     },
     date: {
       type: "date",
-      required: true,
-    },
+      required: true
+    }
   },
-  computedFields,
+  computedFields
 }));
-
-export default makeSource({
+var contentlayer_config_default = makeSource({
   contentDirPath: "./content",
   documentTypes: [Blog, Snippet, Project],
   mdx: {
@@ -112,9 +108,16 @@ export default makeSource({
           theme: "dracula",
           onVisitHighlightedLine(node) {
             node.properties.className.push("line--highlighted");
-          },
-        },
-      ],
-    ],
-  },
+          }
+        }
+      ]
+    ]
+  }
 });
+export {
+  Blog,
+  Project,
+  Snippet,
+  contentlayer_config_default as default
+};
+//# sourceMappingURL=compiled-contentlayer-config-SDGOGMQX.mjs.map
