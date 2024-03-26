@@ -15,7 +15,7 @@ export default function Hero() {
                 <span className="bg-zinc-100 mx-1 px-1 inline-flex items-center border rounded-md gap-1 max-h-7">
                     <img src="/expo.svg" className="w-4" alt="" />
                     Expo
-                </span> combining them with technologies like 
+                </span> combining them with stuffs like 
                 <span className="bg-zinc-100 mx-1 px-1 inline-flex items-center border rounded-md gap-1 max-h-7">
                     <i className="devicon-amazonwebservices-plain-wordmark colored" />
                     AWS
@@ -28,9 +28,13 @@ export default function Hero() {
                     <i className="devicon-nodejs-plain colored" />
                     NodeJS
                 </span> ,
-                <span className="bg-zinc-100 mx-1 px-1 inline-flex items-center border rounded-md gap-1 max-h-7">
+                <span className="bg-zinc-100 mx-    1 px-1 inline-flex items-center border rounded-md gap-1 max-h-7">
                     <i className="devicon-express-original colored" />
                     ExpressJS
+                </span> ,
+                <span className="bg-zinc-100 mx-1 px-1 inline-flex items-center border rounded-md gap-1 max-h-7">
+                    <i className="devicon-prisma-original colored" />
+                    Prisma
                 </span> ,
                 <span className="bg-zinc-100 mx-1 px-1 inline-flex items-center border rounded-md gap-1 max-h-7">
                     <i className="devicon-vercel-original colored" />
