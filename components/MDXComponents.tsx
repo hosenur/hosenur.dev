@@ -1,0 +1,17 @@
+import Image from "next/image"
+import { useMDXComponent } from "next-contentlayer/hooks"
+import Snippet from "./Snippet"
+const components = {
+  Image,
+  Snippet
+}
+
+interface MdxProps {
+  code: string
+}
+
+export function MDX({ code }: MdxProps) {
+  const Component = useMDXComponent(code)
+
+  return <Component components={components} />
+}

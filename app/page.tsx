@@ -6,10 +6,11 @@ import React from 'react'
 export default function Home() {
   return (
     <div className='flex flex-col p-5 max-w-4xl mx-auto'>
-      <main className='flex flex-col gap-10'>
+      <div className='flex flex-col gap-5'>
         <Hero/>
         <RecentBlogs/>  
-      </main>
+
+      </div>
     </div>
   )
 }
