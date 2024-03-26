@@ -9,7 +9,7 @@ main {
     --grid-strength: 1px;
     --grid-dash: 10px;
     --grid-gap: 5px;
-    --grid-color:#ccc;
+    --grid-color:#ddd;
     --paper-color: #fff;
 
     background-color: var(--paper-color);
