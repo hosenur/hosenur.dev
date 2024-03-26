@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-T9K01BD14F"></Script>
         <Script id="google-analytics">
@@ -29,7 +29,7 @@ export default function RootLayout({
             `
           }
         </Script>
-      </Head>
+      </head>
       <body className={animosa.className}>
         <Header />
         <main className="relative mt-16 min-h-screen ">
