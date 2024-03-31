@@ -85,10 +85,6 @@ export const Snippet = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    banner: {
-      type: "string",
-      required: true,
-    },
     language: {
       type: "string",
     },

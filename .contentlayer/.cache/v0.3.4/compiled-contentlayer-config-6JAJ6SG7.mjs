@@ -82,10 +82,6 @@ var Snippet = defineDocumentType(() => ({
       type: "string",
       required: true
     },
-    banner: {
-      type: "string",
-      required: true
-    },
     language: {
       type: "string"
     },
@@ -120,4 +116,4 @@ export {
   Snippet,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-SDGOGMQX.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-6JAJ6SG7.mjs.map

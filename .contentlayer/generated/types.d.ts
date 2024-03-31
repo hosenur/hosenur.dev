@@ -48,7 +48,6 @@ export type Snippet = {
   type: 'Snippet'
   title: string
   description: string
-  banner: string
   language?: string | undefined
   date: IsoDateTimeString
   /** MDX file body */

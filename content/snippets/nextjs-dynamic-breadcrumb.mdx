@@ -1,0 +1,62 @@
+---
+title : "Dyanmic Breadcrumbs in NextJS 14"
+description : "Generate breadcrumbs dunamically in NextJS 14 + shadcn/ui to view on a layout file"
+language: "typescript"
+date: 2024-03-31
+---
+<Snippet
+  language="tsx"
+  fileName="DynamicBreadcrumb.tsx" 
+  codeBlock={`
+'use client'
+import { 
+    Breadcrumb, 
+    BreadcrumbItem, 
+    BreadcrumbLink, 
+    BreadcrumbList, 
+    BreadcrumbSeparator 
+} from '@ui/components/ui/breadcrumb'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const DynamicBreadcrumb = () => {
+
+    const paths = usePathname()
+    const pathNames = paths.split('/').filter(path => path)
+
+    return (
+        <Breadcrumb className="hidden md:flex">
+            <BreadcrumbList>
+                <BreadcrumbItem>
+                    <BreadcrumbLink asChild>
+                        <Link href="/overview">Dashboard</Link>
+                    </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                {
+                    pathNames.map((link, index) => {
+                        let href = '/' + pathNames.slice(0, index + 1).join('/');
+                        let itemLink = link.replace(/-/g, ' ').replace(/\\b\\w/g, l => l.toUpperCase()).replace("Api", "API")
+
+                        return (
+                            <>
+                                <BreadcrumbItem key={index}>
+                                    <BreadcrumbLink asChild>
+                                        <Link href={href}>{itemLink}</Link>
+                                    </BreadcrumbLink>
+                                </BreadcrumbItem>
+                                {
+                                    pathNames.length !== index + 1 && <BreadcrumbSeparator />
+                                }
+                            </>
+                        )
+                    })
+                }
+            </BreadcrumbList>
+        </Breadcrumb>
+    )
+}
+
+export default DynamicBreadcrumb
+`}
+/>

@@ -46,7 +46,7 @@ export default function Snippet({ language, fileName, codeBlock }: any) {
                             }
 
                         </div>
-                        <div className={'px-5 py-2.5 ' + code.className}>
+                        <div className={'px-5 py-2.5 text-wrap ' + code.className}>
 
                             {tokens.map((line, i) => (
                                 <div key={i} {...getLineProps({ line })}>
