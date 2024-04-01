@@ -29,7 +29,7 @@ export default function RootLayout({
           }
         </Script>
       </head>
-      <body className={regular.className+" "+code.style}>
+      <body className={regular.className+" "+code.variable}>
         <Header />
         <main className="relative mt-16 min-h-screen text-lg ">
           {children}

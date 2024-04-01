@@ -10,7 +10,7 @@ export default function RecentProjects() {
                 <Link href={project.slug} key={project._id}>
                     <img className='rounded mb-2' src={project.banner} alt="" />
                     <h2 className={medium.className}>{project.title}</h2>
-                    <p className='text-zinc-500 text-base'>{project.description}</p>
+                    <p className='text-zinc-600'>{project.description}</p>
                 </Link>
             ))}
         </div>

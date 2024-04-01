@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 export default function Hero() {
     return (
         <div className='flex flex-col gap-5'>
-            <p className="leading-8" >Hola 👋, I am Hosenur Rahaman, I craft web and mobile experiences with bleeding edge tech like
+            <p className="leading-8" >Hello 👋, I am Hosenur Rahaman, I craft web and mobile experiences with bleeding edge tech like
                 <span className="bg-zinc-100 mx-1 px-1 inline-flex items-center border rounded-md gap-1 max-h-7">
                     <i className="devicon-react-original colored" />
                     React
