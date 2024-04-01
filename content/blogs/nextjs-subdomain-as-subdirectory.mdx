@@ -3,3 +3,18 @@ title : Serve a NextJS app from a subdomain as a subdirectory of another NextJS 
 publishedAt: 2024-03-26
 description: Quickly setup a Cloudflare worker to serve for example docs.example.com as  example.com/docs or blog.example.com as example.com/blog so your users are not juggled between different domains.
 ---
+While I was building [duotone.ink](https://duotone.ink) : A developer first Invoicing SaaS which generated beafutifully crafted invoices and mails them directly to your customers and also provides a sharable link , make sure to check it out, I had to build a docs page. 
+
+At first I planned to build the docs with [Nextra](https://nextra.site) which is a Next.JS static site generator which builds the pages from MDX. But then I came to know about [Mintlify](https://mintlify.com) which is a super beautiful and excellent docs generator
+
+```tsx showLineNumbers title="pages/docs/index.tsx"
+export default makeSource({
+  contentDirPath: "./content",
+  documentTypes: [Blog, Snippet, Project],
+  mdx: {
+    rehypePlugins: [
+        rehypeCodeTitles,
+    ],
+  },
+});
+```

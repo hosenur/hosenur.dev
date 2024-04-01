@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react"
+import { Mail } from "lucide-react";
 
 export default function Hero() {
     return (
@@ -42,7 +42,7 @@ export default function Hero() {
                 </span>.
             </p>
             <div className="flex items-center gap-2 bg-zinc-100 text-zinc-700  border max-w-min py-1 px-4 rounded-full">
-                <Mail className='w-4 h-4' />
+                <Mail className='w-4 h-4 -mb-1' />
                 <p>mail@hosenur.dev</p>
             </div>
         </div>

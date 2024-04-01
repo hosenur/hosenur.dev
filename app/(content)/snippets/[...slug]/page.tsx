@@ -59,7 +59,7 @@ export async function generateStaticParams(): Promise<
     }));
 }
 
-export default async function ProjectPage({ params }: BlogProps) {
+export default async function Snippet({ params }: BlogProps) {
     const snippet = await getSnippetFromParams(params);
 
     if (!snippet) {

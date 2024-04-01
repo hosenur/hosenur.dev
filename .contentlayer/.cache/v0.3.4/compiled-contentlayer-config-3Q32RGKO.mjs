@@ -3,6 +3,13 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeCodeTitles from "rehype-code-titles";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
+
+// utils/codeTheme.ts
+var rehypePrettyCodeOptions = {
+  theme: "github-light"
+};
+
+// contentlayer.config.js
 var computedFields = {
   slug: {
     type: "string",
@@ -43,10 +50,6 @@ var Project = defineDocumentType(() => ({
     },
     description: {
       type: "string"
-    },
-    draft: {
-      type: "boolean",
-      required: true
     },
     reposiroty: {
       type: "string"
@@ -97,16 +100,10 @@ var contentlayer_config_default = makeSource({
   documentTypes: [Blog, Snippet, Project],
   mdx: {
     rehypePlugins: [
+      rehypePrettyCode,
+      [rehypePrettyCode, rehypePrettyCodeOptions],
       rehypeSlug,
-      [
-        rehypePrettyCode,
-        {
-          theme: "dracula",
-          onVisitHighlightedLine(node) {
-            node.properties.className.push("line--highlighted");
-          }
-        }
-      ]
+      rehypeCodeTitles
     ]
   }
 });
@@ -116,4 +113,4 @@ export {
   Snippet,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-6JAJ6SG7.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-3Q32RGKO.mjs.map

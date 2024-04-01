@@ -1,9 +1,7 @@
 import Image from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
-import Snippet from "./Snippet"
 const components = {
-  Image,
-  Snippet
+  Image
 }
 
 interface MdxProps {

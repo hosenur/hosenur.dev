@@ -60,7 +60,7 @@ export async function generateStaticParams(): Promise<
     }));
 }
 
-export default async function ProjectPage({ params }: BlogProps) {
+export default async function Blog({ params }: BlogProps) {
     const blog = await getBlogFromParams(params);
 
     if (!blog) {
@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: BlogProps) {
     }
 
     return (
-        <article className={"prose prose-invert prose-emerald max-w-6xl prose-img:rounded"}>
+        <article className={"prose prose-invert max-w-6xl prose-img:rounded"}>
             <h1 className={" font-bold text-6xl mb-5"}>{blog.title}</h1>
             {/* <p className="text-xs">Hosenur published this article {moment(blog.publishedAt).format("MMMM Do, YYYY")}</p> */}
             <MDX code={blog.body.code} />

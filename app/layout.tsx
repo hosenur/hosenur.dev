@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { animosa } from "@/utils/fonts";
+import { code, regular } from "@/utils/fonts";
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -29,9 +29,9 @@ export default function RootLayout({
           }
         </Script>
       </head>
-      <body className={animosa.className}>
+      <body className={regular.className+" "+code.style}>
         <Header />
-        <main className="relative mt-16 min-h-screen ">
+        <main className="relative mt-16 min-h-screen text-lg ">
           {children}
         </main>
       </body>
