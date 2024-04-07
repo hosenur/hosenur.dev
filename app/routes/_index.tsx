@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/deno";
 
 export const meta: MetaFunction = () => {
   return [

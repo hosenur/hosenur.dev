@@ -1,10 +1,8 @@
 import { vitePlugin as remix } from "@remix-run/dev";
-import { installGlobals } from "@remix-run/node";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-
-installGlobals();
+import { netlifyPlugin } from "@netlify/remix-edge-adapter/plugin";
 
 export default defineConfig({
-  plugins: [remix(), tsconfigPaths()],
+  plugins: [remix(), netlifyPlugin(), tsconfigPaths()],
 });
