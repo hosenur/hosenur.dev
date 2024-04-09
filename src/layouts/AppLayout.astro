@@ -1,0 +1,18 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Header from "../components/Header.astro"
+import '@fontsource/geist-mono'
+---
+
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body class="bg-black text-zinc-400 font-geist uppercase text-sm">
+        <Header/>
+        <main class="max-w-5xl mx-auto">
+            <slot />
+        </main>
+    </body>
+</html>
