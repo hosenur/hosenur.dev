@@ -2,14 +2,14 @@
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Header from "../components/Header.astro"
-import '@fontsource/geist-mono'
+import '@fontsource-variable/urbanist';
 ---
 
 <html lang="en">
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
-    <body class="bg-black text-zinc-400 font-geist uppercase text-sm">
+    <body class="bg-black text-zinc-400 font-urbanist capitalize text-sm md:text-base">
         <Header/>
         <main class="max-w-5xl mx-auto">
             <slot />
