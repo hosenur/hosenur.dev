@@ -21,8 +21,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
-        <Outlet />
+      <body className="font-commit text-sm text-black">
+        <main className="max-w-4xl mx-auto p-5">
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>

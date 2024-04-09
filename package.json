@@ -14,10 +14,12 @@
     "@netlify/edge-functions": "^2.3.1",
     "@netlify/remix-edge-adapter": "^3.2.1",
     "@netlify/remix-runtime": "^2.2.0",
+    "@remix-run/deno": "^2.8.1",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
     "isbot": "^4.1.0",
+    "lucide-react": "^0.365.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
