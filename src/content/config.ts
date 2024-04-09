@@ -18,10 +18,11 @@ const project = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		pubDate: z.coerce.date(),
-		live : z.string().optional(),
+		live: z.string().optional(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
+		completed: z.boolean(),
 	}),
 });
 
-export const collections = { blog, project};
+export const collections = { blog, project };
