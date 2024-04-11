@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
 import '@fontsource-variable/urbanist';
 import '@fontsource/geist-mono'
 ---
@@ -15,5 +16,6 @@ import '@fontsource/geist-mono'
         <main class="max-w-4xl mx-auto">
             <slot />
         </main>
+        <Footer/>
     </body>
 </html>

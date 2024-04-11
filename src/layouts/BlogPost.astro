@@ -1,4 +1,4 @@
----
+<!-- ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -82,4 +82,28 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</main>
 		<Footer />
 	</body>
+</html> -->
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import '@fontsource-variable/urbanist';
+import '@fontsource/geist-mono'
+---
+
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body class="bg-black text-zinc-400 font-urbanist text-sm md:text-base">
+        <Header/>
+        <main class="max-w-4xl mx-auto py-10 px-5">
+			<article class="prose prose-invert max-w-full prose-lime md:prose-lg">
+
+				<slot />
+			</article>
+        </main>
+        <Footer/>
+    </body>
 </html>

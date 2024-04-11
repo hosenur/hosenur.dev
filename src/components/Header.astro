@@ -1,7 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 const res = await fetch("https://counter.hosenur.workers.dev?domain=hosenurdev");
-const data = await res.json() 
+const data = await res.json() || { result: 0 };
 ---
 
 <!-- ---
@@ -93,6 +93,7 @@ import { SITE_TITLE } from '../consts';
 	<nav class="flex items-center justify-between">
 		<HeaderLink href="/">
 			<div class="flex items-center">
+				<img src="/icon.svg" class="w-4 mr-1.5" alt="">
 				<p>hosenur.</p>
 				<p class="text-lime-300">dev</p>
 			</div>
