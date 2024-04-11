@@ -22,6 +22,8 @@ const project = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		completed: z.boolean(),
+		company: z.string().optional(),
+		companyURL: z.string().optional(),
 	}),
 });
 
