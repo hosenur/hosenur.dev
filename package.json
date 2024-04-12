@@ -17,6 +17,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/urbanist": "^5.0.20",
     "@fontsource/geist-mono": "^5.0.2",
+    "@openpanel/web": "0.0.8-beta",
     "astro": "^4.5.17",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.4"

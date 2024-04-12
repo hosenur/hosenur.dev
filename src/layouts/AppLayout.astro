@@ -1,10 +1,16 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import '@fontsource-variable/urbanist';
-import '@fontsource/geist-mono'
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "@fontsource-variable/urbanist";
+import "@fontsource/geist-mono";
+import { Openpanel } from "@openpanel/web";
+
+new Openpanel({
+    clientId: "e5199c16-88de-445a-90d9-4a7fc379d0a1",
+    trackScreenViews: true,
+});
 ---
 
 <html lang="en">
@@ -12,10 +18,10 @@ import '@fontsource/geist-mono'
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
     <body class="bg-black text-zinc-400 font-urbanist text-sm md:text-base">
-        <Header/>
+        <Header />
         <main class="max-w-4xl mx-auto">
             <slot />
         </main>
-        <Footer/>
+        <Footer />
     </body>
 </html>
