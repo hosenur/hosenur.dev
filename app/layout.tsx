@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-satoshi text-zinc-700 font-medium">
+      <body className="font-satoshi text-zinc- font-medium">
         <Header/>
         <main className="max-w-4xl mx-auto pt-24 px-5">
           {children}

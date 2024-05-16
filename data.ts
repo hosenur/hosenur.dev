@@ -9,8 +9,9 @@ type BlogFrontMatter = {
 type ProjectFrontMatter = {
     title: string
     date: Date
-    summary?: string
-    tags?: any
+    summary: string
+    url: string
+    stack: string[]
 }
 
 export const allBlogs = createSource<{
