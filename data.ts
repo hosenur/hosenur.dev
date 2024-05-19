@@ -3,8 +3,8 @@ import { createSource } from 'mdxts'
 type BlogFrontMatter = {
     title: string
     date: Date
-    summary?: string
-    tags?: any
+    summary: string
+    tags: string[]
 }
 type ProjectFrontMatter = {
     title: string
@@ -12,6 +12,9 @@ type ProjectFrontMatter = {
     summary: string
     url: string
     stack: string[]
+    oss: boolean
+    repo?: string
+    completed: boolean
 }
 
 export const allBlogs = createSource<{

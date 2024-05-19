@@ -6,8 +6,8 @@ import { allProjects } from "@/data"
 
 export default function CurrentProjects() {
     return (
-        <>
-            <div className='flex items-center gap-2 bg-white uppercase w-fit px-2.5 py-1 text-sm'>
+        <div>
+            <div className='flex items-center gap-2 bg-white uppercase w-fit px-2.5 py-1 text-sm mb-5'>
                 <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4' width="200" height="200" viewBox="0 0 200 200" fill="none">
                     <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z" fill="black" />
                 </svg>
@@ -15,7 +15,7 @@ export default function CurrentProjects() {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                 {
-                    allProjects.all().map(project => (
+                    allProjects.all().filter(project => !project.frontMatter.completed).map(project => (
                         <Card key={project.pathname}>
                             <CardHeader className='justify-between items-center'>
                                 <CardTitle className='flex items-center gap-2'>
@@ -55,6 +55,6 @@ export default function CurrentProjects() {
 
 
             </div>
-        </>
+        </div>
     )
 }

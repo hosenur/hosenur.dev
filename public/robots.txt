@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hosenur.dev/sitemap.xml
