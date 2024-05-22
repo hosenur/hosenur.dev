@@ -1,4 +1,5 @@
 import { allBlogs } from '@/data'
+import { Metadata } from 'next'
 
 export function generateStaticParams() {
     return allBlogs.paths().map((pathname) => ({ slug: pathname }))
@@ -16,7 +17,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     return (
         <>
-            <div className='bg-white w-full min-h-screen  p-5 rounded-lg shadow-lg border border-zinc-100'>
+            <div className='bg-white w-full max-w-full min-h-screen  p-5 rounded-lg shadow-lg border border-zinc-100 prose prose-pre:mt-0 '>
                 <Content />
             </div>
         </>

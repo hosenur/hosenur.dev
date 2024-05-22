@@ -1,7 +1,8 @@
 import Footer from "@/components/Footer";
-import type { Metadata } from "next";
-import "./globals.css";
 import Header from "@/components/Header";
+import "./globals.css";
+import NextTopLoader from 'nextjs-toploader';
+
 
 
 
@@ -14,11 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-satoshi text-zinc- font-medium">
-        <Header/>
+        <Header />
         <main className="max-w-4xl mx-auto pt-24 px-5">
+          <NextTopLoader  color="black"/>
+
           {children}
         </main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

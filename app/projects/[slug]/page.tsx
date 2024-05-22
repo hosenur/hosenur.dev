@@ -9,7 +9,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     if (!Content) return null
     return (
         <>
-            <div className='bg-white w-full min-h-screen  p-5 rounded-lg shadow-lg border border-zinc-100'>
+            <div className='bg-white w-full min-h-screen  p-5 rounded-lg shadow-lg border border-zinc-100 prose max-w-full prose-pre:mt-0 z-0'>
                 <Content />
             </div>
         </>

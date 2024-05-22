@@ -1,11 +1,11 @@
 "use client";
 import { Article, Code, Lightning, Rocket, User } from '@phosphor-icons/react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/navigation';
-import { ReactNode, useState } from 'react';
-import { Tooltip, TooltipContent, TooltipProvider } from '../ui/tooltip';
 import { TooltipTrigger } from '@radix-ui/react-tooltip';
+import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { ReactNode, useEffect, useState } from 'react';
+import { Tooltip, TooltipContent, TooltipProvider } from '../ui/tooltip';
 
 const tabs = [
     { title: 'Home', icon: <Lightning weight='duotone' size={20} />, href: "/" },
@@ -51,38 +51,39 @@ const Tab = ({ text, selected, setSelected, index, children, href, router }: Tab
         <Tooltip>
             <TooltipContent>{text}</TooltipContent>
             <TooltipTrigger>
+                <Link href={href} passHref>
 
 
 
-                <motion.div
-                    variants={buttonVariants}
-                    initial="initial"
-                    animate="animate"
-                    custom={selected}
-                    onClick={() => {
-                        router.push(href)
-                        setSelected(tabs[index])
-                    }}
-                    transition={transition}
-                    className={`${selected ? 'bg-zinc-200/90 text-zinc-800 ' : ' hover:text-gray-900'
-                        } relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-zinc-500  transition-colors duration-300 focus-within:outline-zinc-200`}
-                >
-                    {children}
-                    <AnimatePresence>
-                        {selected && (
-                            <motion.span
-                                variants={spanVariants}
-                                initial="initial"
-                                animate="animate"
-                                exit="exit"
-                                transition={transition}
-                                className="overflow-hidden"
-                            >
-                                {text}
-                            </motion.span>
-                        )}
-                    </AnimatePresence>
-                </motion.div>
+                    <motion.div
+                        variants={buttonVariants}
+                        initial="initial"
+                        animate="animate"
+                        custom={selected}
+                        onClick={() => {
+                            setSelected(tabs[index])
+                        }}
+                        transition={transition}
+                        className={`${selected ? 'bg-zinc-200/90 text-zinc-800 ' : ' hover:text-gray-900'
+                            } relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-zinc-500  transition-colors duration-300 focus-within:outline-zinc-200`}
+                    >
+                        {children}
+                        <AnimatePresence>
+                            {selected && (
+                                <motion.span
+                                    variants={spanVariants}
+                                    initial="initial"
+                                    animate="animate"
+                                    exit="exit"
+                                    transition={transition}
+                                    className="overflow-hidden"
+                                >
+                                    {text}
+                                </motion.span>
+                            )}
+                        </AnimatePresence>
+                    </motion.div>
+                </Link>
             </TooltipTrigger>
         </Tooltip>
     )
@@ -91,14 +92,19 @@ const Tab = ({ text, selected, setSelected, index, children, href, router }: Tab
 // IconTabs component
 const Header = ({ center }: { center?: boolean }) => {
     // State to manage selected tab
-    const pathname = usePathname()
-    const [selected, setSelected] = useState<Object>(
-        tabs.find((tab) => tab.href === pathname) || tabs[0]
-    )
+    const pathname = "/" + usePathname().split('/')[1].trim()
+    const [selected, setSelected] = useState<Object>(tabs[0])
+    // const [selected, setSelected] = useState<Object>(
+    //     tabs.find((tab) => tab.href === pathname) || tabs[0]
+    // )
+    useEffect(() => {
+        setSelected(tabs.find((tab) => tab.href === pathname) || tabs[0])
+    }, [pathname])
+
     const router = useRouter()
 
     return (
-        <header className='fixed top-0 w-full glass p-5'>
+        <header className='fixed top-0 w-full glass p-5 z-50'>
             <TooltipProvider>
 
 
