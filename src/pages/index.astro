@@ -1,30 +1,23 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Hero from '../components/Hero.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Hero from "../components/Hero.astro";
+import PersonalProjects from "../components/PersonalProjects.astro";
 import TechStack from "../components/TechStack.astro";
-import PersonalProjects from '../components/PersonalProjects.astro';
+import AppLayout from "../layouts/AppLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="bg-black text-neutral-400 font-urbanist font-semibold">
-		<Header />
-		<main class="pt-20 md:pt-40  min-h-screen p-5 max-w-4xl mx-auto flex flex-col gap-16">
-			<Hero/>
-			<TechStack/>
-			<PersonalProjects/>
-		</main>
-	</body>
+<AppLayout>
+	<main
+		class=" flex flex-col gap-16"
+	>
+		<Hero />
+		<TechStack />
+		<PersonalProjects />
+	</main>
 	<script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'm' || event.key === 'M') {
-                window.open('mailto:mail@hosenur.dev', '_blank');
-            }
-        });
-    </script>
-</html>
+		document.addEventListener("keydown", function (event) {
+			if (event.key === "m" || event.key === "M") {
+				window.open("mailto:mail@hosenur.dev", "_blank");
+			}
+		});
+	</script>
+</AppLayout>

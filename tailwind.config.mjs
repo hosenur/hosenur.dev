@@ -6,5 +6,7 @@ export default {
 			fontFamily: {'urbanist': ['Urbanist', 'sans-serif'],'space': ['Space Mono', 'monospace']},
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 }

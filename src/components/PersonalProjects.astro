@@ -14,10 +14,17 @@ const projects = (await getCollection("projects")).sort(
     <div class="grid grid-cols-1 gap-4">
         {
             projects.map((project) => (
-                <div class="flex flex-col gap-1">
-                    <h2 class="text-white">{project.data.title}</h2>
+                <a
+                    href={`/projects/${project.slug}`}
+                    class="flex flex-col gap-1"
+                >
+                    <h2
+                        class="text-neutral-100 text-lg w-fit"
+                    >
+                        {project.data.title}
+                    </h2>
                     <p>{project.data.description}</p>
-                </div>
+                </a>
             ))
         }
     </div>

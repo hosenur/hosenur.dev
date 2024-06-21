@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Footer from "../components/Footer.astro";
+import AppLayout from "./AppLayout.astro";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<AppLayout>
+	<main class="">
+		<article class="prose prose-invert max-w-4xl">
+			<h1 class="text-4xl md:text-5xl text-lime-400 font-bold">
+				{title}
+			</h1>
+			<slot />
+		</article>
+	</main>
+	<Footer />
+</AppLayout>
