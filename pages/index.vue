@@ -1,3 +1,0 @@
-<template>
-hi there
-</template>
