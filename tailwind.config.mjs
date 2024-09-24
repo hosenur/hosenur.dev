@@ -6,5 +6,6 @@ export default {
 			fontFamily: { 'outfit': ['Outfit Variable', 'sans-serif'] },
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/typography'),
+	],
 }
