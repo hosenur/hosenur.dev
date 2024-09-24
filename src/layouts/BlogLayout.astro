@@ -1,8 +1,12 @@
 ---
 import AppLayout from "./AppLayout.astro";
+const { title,slug } = Astro.props;
 ---
 
 <AppLayout>
+	<h1
+	transition:name={`${slug}`}
+	 class="text-2xl font-bold mb-4">{title}</h1>
 	<article class="prose max-w-full">
 		<slot/>
 	</article>
