@@ -11,7 +11,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://example.com',
+    output: 'server',
+    site: 'https://hosenur.dev',
     integrations: [mdx(), sitemap(), tailwind()],
     adapter: vercel({
         webAnalytics: { enabled: true }
