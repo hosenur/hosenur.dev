@@ -5,4 +5,27 @@ featured: true
 repo: https://github.com/hosenur/frames
 liveURL: https://frames.hosenur.cloud
 ---
-Next.js by Vercel is an excellent solution, it massively improves page scores and makes the overall performace and experience of the website better. However, it is not a drop in replacement for Next Image, Nuxt Image, Astro Image.
+Frames works as a drop in replacement for Next Image Component, Nuxt Image. Built with @unjs/ipx
+
+Differnt frameowrks provide their own set of tooling around image optimization, which aims in making the page speed better, improved performance by popular frameworks like Next, Nuxt and Astro
+
+Specially the [Next Image component](https://nextjs.org/docs/pages/api-reference/components/image) is extremely simple to use, ite comes preinstalled, no additional configuration step is required for local images, you just pass thw width and height and it automatically optimizes the image for the best performance. The one downside I faced when hosting on Vercel and trying to stay in the hobby tier, is  that you only get a hard limit of only 1000 image optimizations per month.
+
+[Nuxt Image](https://image.nuxt.com/) on the other hand, needs some configuration but is far more flexible than Next Image, you can bring in your own Image optmmimzation provider and are free to host anywhere you want and there is no limitation, Nuxt Image allows responive image dimensions, where you can specify differnt optimization ratios for different screen sizes, can generate placeholder images and much more. 
+
+#### Mounting the IPX server on a Adonis route handler
+IPX can run as a server itself and serve image from a directory, or can be mounted as handlers for other frameowrks, in my case I am mounting it on a `/images/*` route
+```ts
+import { createIPX, createIPXNodeServer, ipxFSStorage, ipxHttpStorage } from 'ipx';
+const ipx = createIPX({
+    storage: ipxFSStorage({ dir: "./storage/uploads" }), 
+    httpStorage: ipxHttpStorage({ domains: ['frames.hosenur.cloud'] }), 
+});
+const ipxServer = createIPXNodeServer(ipx);
+
+router.get('/images/*', async ({ request, response }) => {
+    const fullPath = request.param('*').join('/')
+    request.request.url = `/${fullPath}`;
+    return ipxServer(request.request, response.response)
+})
+```

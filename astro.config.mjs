@@ -15,5 +15,10 @@ export default defineConfig({
     integrations: [mdx(), sitemap(), tailwind()],
     adapter: vercel({
         webAnalytics: { enabled: true }
-    })
+    }),
+    markdown:{
+        shikiConfig:{
+            theme: 'catppuccin-latte'
+        }
+    }
 });
