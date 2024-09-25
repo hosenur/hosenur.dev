@@ -18,6 +18,7 @@
     "@fontsource-variable/outfit": "^5.1.0",
     "@fontsource-variable/urbanist": "^5.1.0",
     "@types/react-dom": "^18.3.0",
+    "@vercel/speed-insights": "^1.0.12",
     "astro": "^4.15.9",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2"

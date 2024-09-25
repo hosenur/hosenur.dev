@@ -7,6 +7,8 @@ interface Props {
 	description: string;
 	image?: string;
 }
+import  SpeedInsights  from "@vercel/speed-insights/astro"
+
 import { ViewTransitions } from 'astro:transitions';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -47,3 +49,4 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <ViewTransitions/>
+<SpeedInsights/>
