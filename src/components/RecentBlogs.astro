@@ -10,7 +10,6 @@ const blogs = (await getCollection('blog'))
         { blogs.map(blog => {
             return (
                 <a
-                transition:name={`${blog.slug}`}
                  class="group cursor-pointer" href={`/blog/${blog.slug}/`}>
                     <div class="flex justify-between">
 
