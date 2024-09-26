@@ -1,0 +1,33 @@
+<!DOCTYPE html><!-- ---
+import ViewCounter from "../components/ViewCounter.astro";
+import AppLayout from "./AppLayout.astro";
+const { title } = Astro.props;
+
+---
+
+<AppLayout>
+	<div class="flex justify-between items-center">
+
+		<a
+		href="/"
+		class="border bg-neutral-200/80 w-fit border-neutral-200 px-2.5 rounded">
+	   &larr;
+	   go back
+</a>
+<ViewCounter client:only/>
+</div>
+
+	<h1
+	 class="text-2xl font-bold my-5">{title}</h1>
+	<article class="prose max-w-full min-h-screen">
+		<slot/>
+	</article>
+</AppLayout> --><link rel="stylesheet" href="/_astro/_slug_.C4gUUQ2u.css"><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script><div>
+hello
+</div>
