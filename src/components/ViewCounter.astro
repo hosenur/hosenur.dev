@@ -1,6 +1,5 @@
 ---
 const slug = Astro.url.pathname
-export const prerender = false
 const res = fetch(`https://counter-hosenur.deno.dev/?slug=${slug}`)
   .then((r) => r.json())
   .then((data) => data);
