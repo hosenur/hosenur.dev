@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import ContentLayout from '../../layouts/ContentLayout.astro';
+export const prerender = true;
 
 export async function getStaticPaths() {
 	const posts = await getCollection('project');
