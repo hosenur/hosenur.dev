@@ -5,13 +5,16 @@ const { title } = Astro.props;
 ---
 
 <AppLayout>
-	<a
-	href="/"
-	 class="border bg-neutral-200/80 w-fit border-neutral-200 px-2.5 rounded">
+	<div class="flex justify-between items-center">
+
+		<a
+		href="/"
+		class="border bg-neutral-200/80 w-fit border-neutral-200 px-2.5 rounded">
 	   &larr;
 	   go back
 </a>
 <ViewCounter/>
+</div>
 
 	<h1
 	 class="text-2xl font-bold my-5">{title}</h1>

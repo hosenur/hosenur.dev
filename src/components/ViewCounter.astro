@@ -1,6 +1,5 @@
 ---
-const currentPath = Astro.url.pathname
-const slug = currentPath.split('/')[1]
+const slug = Astro.url.pathname
 const res = fetch(`https://counter-hosenur.deno.dev/?slug=${slug}`)
   .then((r) => r.json())
   .then((data) => data);
@@ -8,5 +7,5 @@ const item = await res;
 ---
 
 <div>
-  <p>Views: {JSON.stringify(item)}</p>
+  <p>read by {item.count} humans</p>
 </div>
