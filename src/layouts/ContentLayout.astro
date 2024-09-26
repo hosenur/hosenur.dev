@@ -2,6 +2,8 @@
 import ViewCounter from "../components/ViewCounter.astro";
 import AppLayout from "./AppLayout.astro";
 const { title } = Astro.props;
+export const prerender = true;
+
 ---
 
 <AppLayout>
