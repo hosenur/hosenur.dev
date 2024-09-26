@@ -1,10 +1,14 @@
----
+<!-- ---
+import BlurFade from "../components/BlurFade";
 import AppLayout from "../layouts/AppLayout.astro";
 ---
 
 <AppLayout>
     <div class="grid grid-cols-2 gap-5">
-        <img class="rounded-md col-span-2" src="https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0042.jpg?updatedAt=1727295861612" alt="">
+        <BlurFade delay={0.25} inView>
+
+            <img class="rounded-md col-span-2" src="https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0042.jpg?updatedAt=1727295861612" alt="">
+        </BlurFade>
         <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/IMG_5066.jpg?updatedAt=1727295600075" alt="">
         <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0165.jpg?updatedAt=1727295711500" alt="">
         <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/IMG_0292.jpg?updatedAt=1727295862314" alt="">
@@ -13,4 +17,12 @@ import AppLayout from "../layouts/AppLayout.astro";
         <img class="rounded-md col-span-2" src="https://ik.imagekit.io/rahaman/hosenur.dev/IMG_5799_jpg.jpg?updatedAt=1727296452580" alt="">
 
     </div>
+</AppLayout> -->
+---
+import GalleryComponent from "../components/GalleryComponent";
+import AppLayout from "../layouts/AppLayout.astro";
+---
+
+<AppLayout>
+    <GalleryComponent client:load/>
 </AppLayout>
