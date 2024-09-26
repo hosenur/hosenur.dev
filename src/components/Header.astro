@@ -3,10 +3,10 @@ const currentPath = Astro.url.pathname
 console.log(currentPath)
 ---
 <div class="max-w-2xl mx-auto flex justify-between items-center ">
-	<a class={`${currentPath === '/' ? 'underline decoration-wavy' : ''}`}>hosenur.dev</a>
+	<a href="/" class={`${currentPath === '/' ? 'underline decoration-wavy underline-offset-4' : ''}`}>hosenur.dev</a>
 	<div class="flex gap-2.5">
-		<a href="/blogs" class={`${currentPath === '/blogs' ? 'underline decoration-wavy' : ''}`}>blog</a>
-		<a href="/projects" class={`${currentPath === '/projects' ? 'underline decoration-wavy' : ''}`}>projects</a>
-		<a href="/gallery" class={`${currentPath === '/gallery' ? 'underline decoration-wavy' : ''}`}>gallery</a>
+		<a href="/blogs" class={`${currentPath === '/blogs' ? 'underline decoration-wavy underline-offset-4' : ''}`}>blog</a>
+		<a href="/projects" class={`${currentPath === '/projects' ? 'underline decoration-wavy underline-offset-4' : ''}`}>projects</a>
+		<a href="/gallery" class={`${currentPath === '/gallery' ? 'underline decoration-wavy underline-offset-4' : ''}`}>gallery</a>
 	</div>
 </div>

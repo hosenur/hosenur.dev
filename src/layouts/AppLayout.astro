@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/outfit';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro'
 import BaseHead from '../components/BaseHead.astro';
 ---
 <html lang="en">
@@ -17,6 +18,7 @@ import BaseHead from '../components/BaseHead.astro';
                 <div class="max-w-2xl mx-auto mt-5 md:mt-10">
                     <slot/>
                 </div>
+                <Footer/>
             </main>
         </body>
         </html>
