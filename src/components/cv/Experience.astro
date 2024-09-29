@@ -3,24 +3,27 @@ const EXPERIENCES = [
     {
         company: "Zeza Technologies",
         position: "ML & Frontend Developer",
+        description: "Built a ML platform for pharma companies for better business decisions, Built with NextJS, AWS and Python",
         start: "January 2023",
         end: "January 2024",
     },
     {
         company: "Techimpace",
         position: "React Native Developer",
+        description: "Built a React Native app for a startup, Built with React Native, Expo and Javascript",
         start: "2020",  
         end: "Present",
     }
 ]
 ---
 <div class="flex flex-col gap-2">
-    <h2 class="text-base">Experience</h2>
+    <h2 class="text-base">Work Experience</h2>
     {
         EXPERIENCES.map((experience) => (
             <div class="">
-                <div class="">{experience.company}</div>
+                <div class="font-medium">{experience.company}</div>
                 <div class="">{experience.position}</div>
+                <p class="">{experience.description}</p>
                 <div class="flex gap-2">
 
                 <span class="">{experience.start}</span>
