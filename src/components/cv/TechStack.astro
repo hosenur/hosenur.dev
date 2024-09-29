@@ -1,0 +1,25 @@
+---
+const TECHNOLOGIES = [
+    "React",
+    "Next.js",
+    "React Native",
+    "NodeJS",
+    "Typescript",
+    "TailwindCSS",
+    "Expo",
+    "AWS"
+]
+---
+<div class="flex flex-col gap-2">
+    <h2 class="text-base">My Tech Stack</h2>
+    <div class="flex flex-wrap gap-2">
+        {
+            TECHNOLOGIES.map((tech) => (
+                <div class="bg-gray-200 rounded-lg px-2 py-1 text-center">
+                    {tech}
+                </div>
+            ))
+        }
+
+    </div>
+</div>
