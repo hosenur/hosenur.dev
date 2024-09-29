@@ -5,20 +5,20 @@ import Footer from '../components/Footer.astro'
 import BaseHead from '../components/BaseHead.astro';
 ---
 <html lang="en">
-    <head>
-        <BaseHead title={"hosenur.dev"} description={"desc"} />
-        </head>
-        <body>
 
-            
-            
-            <main class=" bg-neutral-100 min-h-screen font-outfit text-neutral-700 text-sm md:text-base px-5 py-5 md:py-10">
-                
-                <Header/>
-                <div class="max-w-2xl mx-auto mt-5 md:mt-10">
-                    <slot/>
-                </div>
-                <Footer/>
-            </main>
-        </body>
-        </html>
+<head>
+    <BaseHead title={"hosenur.dev"} description={"desc"} />
+</head>
+
+<body>
+    <main class=" bg-neutral-100 min-h-screen font-outfit text-neutral-700 text-sm md:text-base px-5 py-5 md:py-10">
+
+        <Header />
+        <div class="max-w-2xl mx-auto mt-5 md:mt-10">
+            <slot />
+        </div>
+        <Footer />
+    </main>
+</body>
+
+</html>
