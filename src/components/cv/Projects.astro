@@ -8,7 +8,7 @@ const projects = (await getCollection('project')).filter(
 <div class="flex flex-col gap-2">
 
     <h2 class="text-sm">Personal Projects</h2>
-    <div class="grid grid-cols-3 gap-5">
+    <div class="grid grid-cols-3 gap-2">
     {
         projects.map((project) => (
             <div class="border shadow flex gap-1 flex-col p-2">
@@ -16,6 +16,9 @@ const projects = (await getCollection('project')).filter(
                 <p>
                     {project.data.description}
                 </p>
+                <span class="mt-auto">
+                    {project.data.liveURL}
+                </span>
 
             </div>
         ))
