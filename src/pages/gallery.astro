@@ -1,28 +1,75 @@
-<!-- ---
-import BlurFade from "../components/BlurFade";
+---
 import AppLayout from "../layouts/AppLayout.astro";
+const images = [
+    {
+        idx: 0,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0042.jpg?updatedAt=1727295861612",
+        className: "col-span-2 rounded-md",
+    },
+    {
+        idx: 1,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_5066.jpg?updatedAt=1727295600075",
+        className: "col-span-1 rounded-md",
+    },
+    {
+        idx: 2,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0165.jpg?updatedAt=1727295711500",
+        className: "col-span-1 rounded-md",
+    },
+    {
+        idx: 3,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_0292.jpg?updatedAt=1727295862314",
+        className: "col-span-1 rounded-md",
+
+    },
+    {
+        idx: 4,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0149.jpg?updatedAt=1727296041299",
+        className: "col-span-1 rounded-md",
+
+    },
+    {
+        idx: 5,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_2521%20(1).jpg?updatedAt=1731609067827",
+        className: "col-span-1 rounded-md",
+    },
+    {
+        idx: 8,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_0557.jpg?updatedAt=1731609049398",
+        className: "col-span-1 rounded-md",
+    },
+    {
+        idx: 6,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0134.jpg?updatedAt=1731609065225",
+        className: "col-span-2 rounded-md",
+
+    },
+
+
+    {
+        idx: 9,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_1801.jpg?updatedAt=1731609681256",
+        className: "col-span-1 rounded-md",
+        
+    },
+    {
+        idx: 10,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_0025.jpg?updatedAt=1731611202144",
+        className: "col-span-1 rounded-md",
+        
+    },
+];
 ---
 
 <AppLayout>
-    <div class="grid grid-cols-2 gap-5">
-        <BlurFade delay={0.25} inView>
-
-            <img class="rounded-md col-span-2" src="https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0042.jpg?updatedAt=1727295861612" alt="">
-        </BlurFade>
-        <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/IMG_5066.jpg?updatedAt=1727295600075" alt="">
-        <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0165.jpg?updatedAt=1727295711500" alt="">
-        <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/IMG_0292.jpg?updatedAt=1727295862314" alt="">
-        <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0149.jpg?updatedAt=1727296041299" alt="">
-        <img class="rounded-md" src="https://ik.imagekit.io/rahaman/hosenur.dev/IMG_2521.jpg?updatedAt=1727296453158" alt="">
-        <img class="rounded-md col-span-2" src="https://ik.imagekit.io/rahaman/hosenur.dev/IMG_5799_jpg.jpg?updatedAt=1727296452580" alt="">
-
+    <div class="grid grid-cols-2 gap-2">
+        {
+            images.map((image) => (
+                <img
+                    src={image.url}
+                    class={image.className}
+                />
+            ))
+        }
     </div>
-</AppLayout> -->
----
-import GalleryComponent from "../components/GalleryComponent";
-import AppLayout from "../layouts/AppLayout.astro";
----
-
-<AppLayout>
-    <GalleryComponent client:load/>
 </AppLayout>

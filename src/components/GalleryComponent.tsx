@@ -23,15 +23,23 @@ const images = [
     },
     {
         idx: 5,
-        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_2521.jpg?updatedAt=1727296453158",
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_2521%20(1).jpg?updatedAt=1731609067827",
     },
     {
         idx: 6,
-        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_2521.jpg?updatedAt=1727296453158",
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/DSC_0134.jpg?updatedAt=1731609065225",
     },
     {
         idx: 7,
         url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_5799_jpg.jpg?updatedAt=1727296452580",
+    },
+    {
+        idx: 8,
+        url : 'https://ik.imagekit.io/rahaman/hosenur.dev/IMG_0557.jpg?updatedAt=1731609049398'
+    },
+    {
+        idx: 9,
+        url: "https://ik.imagekit.io/rahaman/hosenur.dev/IMG_1801.jpg?updatedAt=1731609681256"
     }
 ];
 
@@ -43,7 +51,7 @@ export default function GalleryComponent() {
     return (
         <section id="photos">
             <div className="columns-2 gap-4 ">
-                {images.map(({  url, idx }) => (
+                {images.map(({ url, idx }) => (
                     <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
                         <img
                             className={`mb-4 size-full rounded-lg object-contain`}
